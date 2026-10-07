@@ -10,18 +10,18 @@ try{var _t=localStorage.getItem("bac-water-theme");if(_t==="light"||_t==="dark")
 </script>
 <style>
 :root{
-  --bg0:#06070d; --bg1:#0a0c17;
-  --ink:#edf0f9; --muted:#a9b1c9; --faint:#7f88a5;
-  --sky:#BAE6FD; --sky-deep:#0284C7;
-  --teal:#0284C7; --teal-deep:#0C4A6E;
-  --org:#0284C7; --org-deep:#0C4A6E;
-  --amber:#fbbf24; --rose:#fb7185; --cyan:#BAE6FD;
-  --card:#0d1020; --card2:#12162b;
+  --bg0:#0d0607; --bg1:#170a0c;
+  --ink:#f9edef; --muted:#c9a9ae; --faint:#a57f85;
+  --sky:#4ade80; --sky-deep:#1c9b4b;
+  --teal:#f43f5e; --teal-deep:#b80b28;
+  --org:#f43f5e; --org-deep:#b80b28;
+  --amber:#818cf8; --rose:#4ade80; --cyan:#4ade80;
+  --card:#200d10; --card2:#2b1216;
   --line:rgba(255,255,255,.09);
-  --grad:linear-gradient(100deg,#BAE6FD 5%,#0284C7 50%,#0C4A6E 95%);
-  --ongrad:#0a0c14;
+  --grad:linear-gradient(100deg,#bafdd2 5%,#c40526 50%,#6e0c1c 95%);
+  --ongrad:#140a0c;
   --radius:18px;
-  --acc1:#BAE6FD;--acc2:#0284C7;--acc3:#0C4A6E;
+  --acc1:#bafdd2;--acc2:#c40526;--acc3:#6e0c1c;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
   --disp:"Avenir Next","Segoe UI",-apple-system,BlinkMacSystemFont,Inter,Roboto,sans-serif;
 }
@@ -31,15 +31,15 @@ body{font-family:var(--font);background:var(--bg0);color:var(--ink);
   font-size:1.06rem;line-height:1.75;overflow-x:clip;-webkit-font-smoothing:antialiased}
 .bg-grad{position:fixed;inset:0;z-index:0;pointer-events:none;
   background:
-    radial-gradient(900px 620px at 12% -6%, rgba(2,132,199,0.288), transparent 60%),
-    radial-gradient(820px 600px at 88% 22%, rgba(12,74,110,0.192), transparent 60%),
-    radial-gradient(1000px 800px at 50% 110%, rgba(1,92,139,0.192), transparent 62%),
-    radial-gradient(700px 500px at 78% 78%, rgba(251,113,133,0.096), transparent 60%)}
+    radial-gradient(900px 620px at 12% -6%, rgba(196,5,38,0.288), transparent 60%),
+    radial-gradient(820px 600px at 88% 22%, rgba(110,12,28,0.192), transparent 60%),
+    radial-gradient(1000px 800px at 50% 110%, rgba(136,4,26,0.192), transparent 62%),
+    radial-gradient(700px 500px at 78% 78%, rgba(113,251,163,0.096), transparent 60%)}
 #dots{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.85}
 .orb{position:fixed;z-index:0;pointer-events:none;border-radius:50%;filter:blur(90px)}
-.o1{width:520px;height:520px;left:-140px;top:6%;background:radial-gradient(circle,rgba(2,132,199,0.24),transparent 70%);animation:drift1 38s ease-in-out infinite alternate}
-.o2{width:460px;height:460px;right:-120px;top:38%;background:radial-gradient(circle,rgba(12,74,110,0.192),transparent 70%);animation:drift2 46s ease-in-out infinite alternate}
-.o3{width:430px;height:430px;left:24%;bottom:-160px;background:radial-gradient(circle,rgba(1,92,139,0.192),transparent 70%);animation:drift3 54s ease-in-out infinite alternate}
+.o1{width:520px;height:520px;left:-140px;top:6%;background:radial-gradient(circle,rgba(196,5,38,0.24),transparent 70%);animation:drift1 38s ease-in-out infinite alternate}
+.o2{width:460px;height:460px;right:-120px;top:38%;background:radial-gradient(circle,rgba(110,12,28,0.192),transparent 70%);animation:drift2 46s ease-in-out infinite alternate}
+.o3{width:430px;height:430px;left:24%;bottom:-160px;background:radial-gradient(circle,rgba(136,4,26,0.192),transparent 70%);animation:drift3 54s ease-in-out infinite alternate}
 @keyframes drift1{from{transform:translate(0,0)}to{transform:translate(120px,80px)}}
 @keyframes drift2{from{transform:translate(0,0)}to{transform:translate(-100px,-70px)}}
 @keyframes drift3{from{transform:translate(0,0)}to{transform:translate(90px,-80px)}}
@@ -61,36 +61,36 @@ body{font-family:var(--font);background:var(--bg0);color:var(--ink);
 #themeToggle .tt-opt svg{width:15px;height:15px}
 #themeToggle .tt-opt:hover{color:var(--ink)}
 #themeToggle .tt-opt:focus-visible{outline:2px solid var(--sky);outline-offset:2px}
-#themeToggle .tt-opt.active{background:var(--grad);color:#0a0c14}
+#themeToggle .tt-opt.active{background:var(--grad);color:#140a0c}
 @media(max-width:720px){#themeToggle{top:66px}}
 [data-theme="dark"]{color-scheme:dark}
 /* soft neutral gray light theme — never stark white */
 [data-theme="light"]{
-  --bg0:#e8ebf0; --bg1:#eef1f6;
-  --ink:#1b2436; --muted:#4d5871; --faint:#707a93;
-  --sky:#0284C7; --sky-deep:#0C4A6E;
-  --teal:#015f8f; --teal-deep:#014c73;
-  --org:#0284C7; --org-deep:#0C4A6E;
-  --amber:#b45309; --rose:#e11d48; --cyan:#014c73;
-  --card:#f8fafc; --card2:#e9edf3;
-  --line:rgba(15,23,42,.14);
-  --grad:linear-gradient(100deg,#0284C7,#0C4A6E,#0284C7);
+  --bg0:#e8f0eb; --bg1:#eef6f1;
+  --ink:#1b3625; --muted:#4d715a; --faint:#70937c;
+  --sky:#18aa4d; --sky-deep:#0a4820;
+  --teal:#c80526; --teal-deep:#5b0211;
+  --org:#18aa4d; --org-deep:#0a4820;
+  --amber:#1a2ff9; --rose:#18aa4d; --cyan:#c80526;
+  --card:#f8fcf9; --card2:#e9f3ed;
+  --line:rgba(15,42,25,.14);
+  --grad:linear-gradient(100deg,#05c44a,#0c6e2f,#05c44a);
   --ongrad:#ffffff;
   color-scheme:light;
 }
-[data-theme="light"] nav.chapters{background:rgba(232,235,240,.88)}
-[data-theme="light"] .toc{background:rgba(232,235,240,.85)}
-[data-theme="light"] .toc a:hover{background:rgba(15,23,42,.06)}
+[data-theme="light"] nav.chapters{background:rgba(232,240,235,.88)}
+[data-theme="light"] .toc{background:rgba(232,240,235,.85)}
+[data-theme="light"] .toc a:hover{background:rgba(15,42,25,.06)}
 [data-theme="light"] .orb{opacity:.5}
 [data-theme="light"] #dots{opacity:.55}
 [data-theme="light"] .bg-grad{opacity:.55}
-nav.chapters{position:sticky;top:0;z-index:50;background:rgba(6,7,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-nav.chapters .rail{max-width:1080px;margin:0 auto;padding:.65rem 1rem;display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;padding-right:3.8rem}
+nav.chapters{position:sticky;top:0;z-index:50;background:rgba(13,6,7,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav.chapters .rail{max-width:1280px;margin:0 auto;padding:.65rem 1rem;display:flex;gap:.5rem;overflow-x:auto;scrollbar-width:none;padding-right:3.8rem}
 nav.chapters .rail::-webkit-scrollbar{display:none}
 nav.chapters a{flex:0 0 auto;text-decoration:none;color:var(--muted);font-size:.82rem;font-weight:600;
   letter-spacing:.04em;padding:.42rem .8rem;border:1px solid var(--line);border-radius:999px;white-space:nowrap;transition:all .25s ease}
 nav.chapters a:hover{color:var(--ink);border-color:rgba(255,255,255,.25)}
-nav.chapters a.active{color:#0a0c14;background:var(--grad);border-color:transparent}
+nav.chapters a.active{color:#140a0c;background:var(--grad);border-color:transparent}
 .toc{display:none}
 @media(min-width:1200px){
   nav.chapters{display:none}
@@ -98,7 +98,7 @@ nav.chapters a.active{color:#0a0c14;background:var(--grad);border-color:transpar
   .toc{display:flex;position:fixed;left:0;top:0;bottom:0;width:248px;z-index:45;
     flex-direction:column;justify-content:center;gap:.2rem;
     padding:2rem 1.1rem 2rem 1.4rem;
-    background:rgba(6,7,13,.72);backdrop-filter:blur(14px);border-right:1px solid var(--line)}
+    background:rgba(13,6,7,.72);backdrop-filter:blur(14px);border-right:1px solid var(--line)}
   .toc .brand{font-family:var(--disp);font-weight:800;font-size:.98rem;letter-spacing:-.01em;
     margin-bottom:1.2rem;line-height:1.35;color:var(--ink);
     text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
@@ -120,22 +120,22 @@ nav.chapters a.active{color:#0a0c14;background:var(--grad);border-color:transpar
   .toc .mini-bar{height:3px;background:rgba(255,255,255,.08);border-radius:99px;margin-top:.55rem;overflow:hidden}
   .toc .mini-bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:99px}
 }
-.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 1.25rem}
+.wrap{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 1.25rem}
 section.chapter{padding:4.2rem 0 1rem;scroll-margin-top:84px}
 .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:700;letter-spacing:.22em;
   text-transform:uppercase;color:var(--faint);margin-bottom:1rem}
 .eyebrow .n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:10px;
-  background:var(--grad);color:#0a0c14;font-size:.85rem;letter-spacing:0}
+  background:var(--grad);color:#140a0c;font-size:.85rem;letter-spacing:0}
 h2{font-family:var(--disp);font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;margin-bottom:1rem}
 h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .lede{color:var(--muted);font-size:1.12rem;max-width:44rem;margin-bottom:2rem}
 .lede strong{color:var(--ink)}
-.hero{position:relative;z-index:1;text-align:center;padding:5.5rem 1.25rem 3.5rem;max-width:960px;margin:0 auto}
+.hero{position:relative;z-index:1;text-align:center;padding:5.5rem 1.25rem 3.5rem;max-width:1280px;margin:0 auto}
 .badge{display:inline-flex;align-items:center;gap:.55rem;font-size:.78rem;font-weight:700;letter-spacing:.18em;
   text-transform:uppercase;color:var(--ink);border:1px solid var(--line);background:rgba(255,255,255,.04);
   padding:.55rem 1.1rem;border-radius:999px;margin-bottom:1.6rem}
-.badge .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(251,191,36,.6);animation:pulse 2.2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(251,191,36,.55)}70%{box-shadow:0 0 0 12px rgba(251,191,36,0)}100%{box-shadow:0 0 0 0 rgba(251,191,36,0)}}
+.badge .dot{width:.6rem;height:.6rem;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(38,57,249,.6);animation:pulse 2.2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(38,57,249,.55)}70%{box-shadow:0 0 0 12px rgba(38,57,249,0)}100%{box-shadow:0 0 0 0 rgba(38,57,249,0)}}
 .hero h1{font-family:var(--disp);font-weight:900;letter-spacing:-.03em;line-height:1.02;font-size:clamp(2.4rem,7.5vw,4.8rem);margin-bottom:1.1rem}
 .hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
   background-size:200% auto;animation:sheen 9s ease-in-out infinite}
@@ -145,7 +145,7 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .quickread{max-width:46rem;margin:0 auto;text-align:left;background:rgba(255,255,255,.035);
   border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem 1.5rem;display:flex;gap:1rem;align-items:flex-start}
 .quickread .tag{flex:0 0 auto;font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--grad);color:#0a0c14;border-radius:8px;padding:.35rem .7rem;margin-top:.2rem}
+  background:var(--grad);color:#140a0c;border-radius:8px;padding:.35rem .7rem;margin-top:.2rem}
 .quickread p{color:var(--muted);font-size:.98rem}
 .quickread p strong{color:var(--ink)}
 .hero-stats{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.4rem}
@@ -186,13 +186,13 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .kv:first-of-type{border-top:none}
 .kv .k{flex:0 0 auto;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
   padding:.3rem .7rem;border-radius:8px;margin-top:.25rem}
-.kv .k.s{background:rgba(124,199,255,.12);color:var(--sky);border:1px solid rgba(124,199,255,.35)}
-.kv .k.t{background:rgba(94,234,212,.10);color:var(--teal);border:1px solid rgba(94,234,212,.35)}
-.kv .k.o{background:rgba(251,146,60,.12);color:var(--org);border:1px solid rgba(251,146,60,.35)}
-.kv .k.a{background:rgba(251,191,36,.12);color:var(--amber);border:1px solid rgba(251,191,36,.35)}
-.kv .k.g{background:rgba(251,113,133,.12);color:var(--rose);border:1px solid rgba(251,113,133,.35)}
+.kv .k.s{background:rgba(252,127,148,.12);color:var(--sky);border:1px solid rgba(252,127,148,.35)}
+.kv .k.t{background:rgba(234,94,118,.10);color:var(--teal);border:1px solid rgba(234,94,118,.35)}
+.kv .k.o{background:rgba(61,78,250,.12);color:var(--org);border:1px solid rgba(61,78,250,.35)}
+.kv .k.a{background:rgba(38,57,249,.12);color:var(--amber);border:1px solid rgba(38,57,249,.35)}
+.kv .k.g{background:rgba(113,251,163,.12);color:var(--rose);border:1px solid rgba(113,251,163,.35)}
 .kv p{font-size:.99rem}
-.diagram{background:radial-gradient(600px 300px at 50% 0%,rgba(2,132,199,.10),transparent 70%),#090b15;
+.diagram{background:radial-gradient(600px 300px at 50% 0%,rgba(196,5,38,.10),transparent 70%),#15090b;
   border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;margin:0 0 1.4rem;overflow:hidden}
 .diagram svg{display:block;width:100%;height:auto}
 .diagram .cap{text-align:center;color:var(--faint);font-size:.85rem;margin-top:.9rem;letter-spacing:.03em}
@@ -209,14 +209,14 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .ebar .row .v{font-size:.88rem;color:var(--faint);font-variant-numeric:tabular-nums}
 .ebar .track{height:14px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
 .ebar .fill{height:100%;width:0;border-radius:999px;transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
-.in .ebar .fill{width:var(--w)}
+.ebar.in .fill{width:var(--w)}
 .ebar .note{font-size:.85rem;color:var(--faint);margin-top:.45rem}
 .anec-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 @media(max-width:720px){.anec-grid{grid-template-columns:1fr}}
 .anec{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;position:relative;overflow:hidden}
 .anec::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
 .anec .stamp{display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.12em;
-  color:var(--amber);border:1px solid rgba(251,191,36,.4);background:rgba(251,191,36,.08);
+  color:var(--amber);border:1px solid rgba(38,57,249,.4);background:rgba(38,57,249,.08);
   padding:.28rem .6rem;border-radius:7px;text-transform:uppercase;margin-bottom:.65rem}
 .anec h4{font-size:1.05rem;font-weight:800;margin-bottom:.5rem}
 .anec-head{display:flex;align-items:center;gap:.85rem;margin-bottom:.55rem}
@@ -227,12 +227,21 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .ulegend{display:flex;align-items:center;gap:.75rem;margin:0 0 1.5rem;padding:.85rem 1.15rem;border:1px dashed var(--line);border-radius:14px;background:rgba(255,255,255,.03);color:var(--muted);font-size:.93rem}
 .ulegend strong{color:var(--ink)}
 @media (prefers-reduced-motion:reduce){.udot::after{animation:none;opacity:.35;transform:scale(.8)}}
+/* --- layman example tiles: theme-accent pulse dot (distinct from amber anecdote dots) --- */
+.xtile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1rem 1.25rem;margin:1.2rem 0;font-size:.94rem;line-height:1.65;color:var(--muted)}
+.xtile strong{color:var(--ink)}
+.xtile .xlead{font-weight:800;color:var(--sky)}
+.xdot{position:absolute;top:-7px;left:24px;width:13px;height:13px;border-radius:50%;background:var(--sky)}
+.xdot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:2px solid var(--sky);animation:xdotPulse 2.2s ease-out infinite}
+@keyframes xdotPulse{0%{transform:scale(.55);opacity:.9}70%{opacity:.25}100%{transform:scale(1.25);opacity:0}}
+@media (prefers-reduced-motion:reduce){.xdot::after{animation:none;opacity:.35;transform:scale(.8)}}
 .anec-head .thumb{flex:0 0 auto;width:54px;height:54px;border-radius:14px;border:1px solid var(--line)}
 .anec-head h4{margin-bottom:0}
 .anec p{color:var(--muted);font-size:.95rem}
 .anec p strong{color:var(--ink)}
 .anec .caveat{margin-top:.8rem;font-size:.82rem;color:var(--faint);border-top:1px dashed var(--line);padding-top:.7rem}
-.folk-note{background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.3);border-radius:var(--radius);
+.folk-note{background:rgba(38,57,249,.06);border:1px solid rgba(38,57,249,.3);border-radius:var(--radius);
   padding:1.2rem 1.4rem;margin-bottom:1.6rem;color:var(--muted);font-size:.98rem}
 .folk-note strong{color:var(--amber)}
 .safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
@@ -243,9 +252,9 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .scard h4{font-size:1.05rem;font-weight:800;margin-bottom:.5rem}
 .scard p{color:var(--muted);font-size:.95rem}
 .scard p strong{color:var(--ink)}
-.lvl-known .level{background:rgba(251,191,36,.1);color:var(--amber);border:1px solid rgba(251,191,36,.4)}
-.lvl-theory .level{background:rgba(251,146,60,.1);color:var(--org);border:1px solid rgba(251,146,60,.4)}
-.lvl-unknown .level{background:rgba(251,113,133,.1);color:var(--rose);border:1px solid rgba(251,113,133,.4)}
+.lvl-known .level{background:rgba(38,57,249,.1);color:var(--amber);border:1px solid rgba(38,57,249,.4)}
+.lvl-theory .level{background:rgba(61,78,250,.1);color:var(--org);border:1px solid rgba(61,78,250,.4)}
+.lvl-unknown .level{background:rgba(113,251,163,.1);color:var(--rose);border:1px solid rgba(113,251,163,.4)}
 .gloss{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card)}
 .g-item{border-bottom:1px solid var(--line)}
 .g-item:last-child{border-bottom:none}
@@ -257,7 +266,7 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .g-item:nth-child(3n) .g-q .term{color:var(--org)}
 .g-q .plus{flex:0 0 auto;width:1.7rem;height:1.7rem;border-radius:50%;border:1px solid var(--line);margin-left:auto;
   display:inline-flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--muted);transition:all .3s}
-.g-item.open .g-q .plus{transform:rotate(45deg);background:var(--grad);color:#0a0c14;border-color:transparent}
+.g-item.open .g-q .plus{transform:rotate(45deg);background:var(--grad);color:#140a0c;border-color:transparent}
 .gthumb{flex:0 0 auto;width:42px;height:42px;border-radius:12px;border:1px solid var(--line);
   animation:gaFloat 5s ease-in-out infinite}
 .gthumb.v2{animation:gaBreathe 4.4s ease-in-out infinite}
@@ -266,10 +275,9 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 @keyframes gaBreathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
 @keyframes gaTilt{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
 .g-a{max-height:0;overflow:hidden;transition:max-height .45s ease}
-.g-a .gsci,.g-a .gex{padding:0 1.4rem 1rem;color:var(--muted);font-size:.95rem}
-.g-a .gsci strong,.g-a .gex strong{color:var(--ink)}
+.g-a .gsci{padding:0 1.4rem 1rem;color:var(--muted);font-size:.95rem}
+.g-a .gsci strong{color:var(--ink)}
 .gslabel{display:block;font-size:.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-bottom:.35rem}
-.g-a .gex{margin:0 1.4rem 1rem;padding:0 0 0 1rem;border-left:2px solid var(--line)}
 .g-a .plain{margin:0 1.4rem 1.3rem;background:rgba(255,255,255,.035);border:1px dashed rgba(255,255,255,.22);
   border-radius:12px;padding:1rem 1.2rem;font-size:.96rem;color:var(--muted)}
 .g-a .plain b{color:var(--ink)}
@@ -282,13 +290,17 @@ h2 .hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;
 .take h4{font-size:1.05rem;font-weight:800;margin-bottom:.4rem}
 .take p{color:var(--muted);font-size:.95rem}
 .take p strong{color:var(--ink)}
-.limits{background:rgba(251,113,133,.05);border:1px solid rgba(251,113,133,.3);border-radius:var(--radius);
+.limits{background:rgba(113,251,163,.05);border:1px solid rgba(113,251,163,.3);border-radius:var(--radius);
   padding:1.4rem 1.6rem;margin-bottom:1.6rem}
 .limits h3{font-family:var(--disp);font-size:1.2rem;font-weight:800;margin-bottom:.7rem;color:var(--rose)}
 .limits ul{list-style:none;display:grid;gap:.6rem}
 .limits li{color:var(--muted);font-size:.97rem;padding-left:1.6rem;position:relative}
 .limits li::before{content:"✕";position:absolute;left:0;color:var(--rose);font-weight:800}
 .limits li strong{color:var(--ink)}
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+.checklist li{color:var(--muted);font-size:.97rem;padding-left:1.6rem;position:relative}
+.checklist li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:800}
+.checklist li strong{color:var(--ink)}
 footer{position:relative;z-index:1;margin-top:4rem;border-top:1px solid var(--line);
   background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
 footer .wrap{padding-top:2.5rem;padding-bottom:3rem}
@@ -323,7 +335,7 @@ table.trial tr td:first-child{color:var(--ink);font-weight:600}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .reveal{opacity:1;transform:none}
-  .in .ebar .fill{transition:none}
+  .ebar.in .fill{transition:none}
 }
 
 /* --- ambient motion additions: subtle, additive, non-intrusive --- */
@@ -333,6 +345,20 @@ table.trial tr td:first-child{color:var(--ink);font-weight:600}
 .seqr1{animation:seqGlow 4.5s ease-in-out infinite}
 .seqr2{animation:seqGlow 4.5s ease-in-out .9s infinite}
 .seqr3{animation:seqGlow 4.5s ease-in-out 1.8s infinite}
+.seqr4{animation:seqGlow 4.5s ease-in-out 2.7s infinite}
+.seqr5{animation:seqGlow 4.5s ease-in-out 3.6s infinite}
+/* big 0.9% vs 0.9% callout */
+.pct-callout{display:grid;grid-template-columns:1fr auto 1fr;gap:1.2rem;align-items:stretch;margin:0 0 1.4rem}
+.pct-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.6rem;text-align:center}
+.pct-card .bignum{font-family:var(--disp);font-size:3.2rem;font-weight:800;letter-spacing:-.02em}
+.pct-card.balc{--ac:linear-gradient(90deg,#0919b4,#2639f9)}
+.pct-card.balc .bignum{color:var(--amber)}
+.pct-card.salt .bignum{color:var(--sky)}
+.pct-card h4{margin:.4rem 0 .6rem;font-size:1.05rem}
+.pct-card p{color:var(--muted);font-size:.93rem;margin:0}
+.pct-vs{align-self:center;font-size:2rem;font-weight:800;color:var(--rose);white-space:nowrap}
+.rate-head{font-family:var(--disp);font-size:1.5rem;font-weight:800;text-align:center;margin:2.5rem 0 1rem;color:var(--ink)}
+@media(max-width:720px){.pct-callout{grid-template-columns:1fr}.pct-vs{justify-self:center}}
 .flowseq{stroke-dasharray:6 7;animation:dashmove 1.6s linear infinite,seqGlow 4.5s ease-in-out infinite}
 .flowseq2{stroke-dasharray:6 7;animation:dashmove 1.6s linear infinite,seqGlow 4.5s ease-in-out .9s infinite}
 .flowseq3{stroke-dasharray:6 7;animation:dashmove 1.6s linear infinite,seqGlow 4.5s ease-in-out 1.8s infinite}
@@ -348,8 +374,8 @@ mini-poll { display: block; }
   border: 1px solid transparent;
   border-radius: 18px;
   background:
-    linear-gradient(var(--card, #0d1020), var(--card, #0d1020)) padding-box,
-    linear-gradient(135deg, var(--mpc1, #fdba74), var(--mpc2, #a3e635)) border-box;
+    linear-gradient(var(--card, #200d10), var(--card, #200d10)) padding-box,
+    linear-gradient(135deg, var(--mpc1, #7682fb), var(--mpc2, #a3e635)) border-box;
   font-family: inherit;
   overflow: hidden;
 }
@@ -358,14 +384,14 @@ mini-poll { display: block; }
   display: flex; align-items: center; gap: .6rem;
   width: 100%; cursor: pointer; text-align: left;
   padding: .75rem 1rem; border: 0; background: transparent;
-  color: var(--muted, #a9b1c9); font-size: .88rem;
+  color: var(--muted, #c9a9ae); font-size: .88rem;
 }
 .mpoll-teaser:hover { background: rgba(255,255,255,.03); }
-.mpoll-teaser:focus-visible { outline: 2px solid var(--amber, #fbbf24); outline-offset: -2px; }
+.mpoll-teaser:focus-visible { outline: 2px solid var(--amber, #2639f9); outline-offset: -2px; }
 .mpoll-teaser-dot {
   flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%;
-  background: var(--mpc1, #fdba74);
-  box-shadow: 0 0 10px var(--mpc1, #fdba74);
+  background: var(--mpc1, #7682fb);
+  box-shadow: 0 0 10px var(--mpc1, #7682fb);
   animation: mpulse 2.4s ease-in-out infinite;
 }
 @keyframes mpulse { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
@@ -373,7 +399,7 @@ mini-poll { display: block; }
   flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .mpoll-teaser-chev {
-  flex: 0 0 auto; transition: transform .2s; color: var(--faint, #7f88a5);
+  flex: 0 0 auto; transition: transform .2s; color: var(--faint, #a57f85);
 }
 .mpoll.open .mpoll-teaser-chev { transform: rotate(180deg); }
 /* animated expand/collapse */
@@ -391,25 +417,25 @@ mini-poll { display: block; }
 .mpoll.open .mpoll-body { opacity: 1; transform: translateY(0); }
 .mpoll-kicker {
   font-size: .78rem; font-weight: 800; letter-spacing: .14em;
-  text-transform: uppercase; color: var(--muted, #a9b1c9);
+  text-transform: uppercase; color: var(--muted, #c9a9ae);
   margin-bottom: .6rem;
 }
 /* single top-of-page banner (preview mode only) */
 .mpoll-topbanner {
   display: flex; align-items: center; justify-content: center; gap: .6rem;
   max-width: 620px; margin: 0 auto 1.4rem; padding: .6rem 1.2rem;
-  border-radius: 999px; font-size: .82rem; font-weight: 700; color: #0a0c14;
-  background: linear-gradient(100deg, var(--acc1, #fdba74), var(--acc2, #a3e635), var(--acc3, #fb923c));
+  border-radius: 999px; font-size: .82rem; font-weight: 700; color: #140a0c;
+  background: linear-gradient(100deg, var(--acc1, #7682fb), var(--acc2, #a3e635), var(--acc3, #3d4efa));
 }
 .mpoll-topbanner-dot {
   flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%;
-  background: #0a0c14;
+  background: #140a0c;
   animation: mpulse 2.4s ease-in-out infinite;
 }
 .mpoll-field { border: 0; margin: 0; padding: 0; }
 .mpoll-q {
   font-size: 1.12rem; font-weight: 800; line-height: 1.35;
-  color: var(--ink, #edf0f9); margin-bottom: .9rem; padding: 0;
+  color: var(--ink, #f9edef); margin-bottom: .9rem; padding: 0;
 }
 .mpoll-opts { display: grid; gap: .55rem; }
 .mpoll-opt {
@@ -417,55 +443,55 @@ mini-poll { display: block; }
   width: 100%; text-align: left; cursor: pointer;
   padding: .72rem .9rem; border-radius: 12px;
   border: 1px solid var(--line, rgba(255,255,255,.09));
-  background: rgba(255,255,255,.03); color: var(--ink, #edf0f9);
+  background: rgba(255,255,255,.03); color: var(--ink, #f9edef);
   font-size: .95rem; transition: border-color .15s, background .15s, transform .15s;
 }
-.mpoll-opt:hover { border-color: var(--amber, #fbbf24); background: rgba(255,255,255,.05); }
-.mpoll-opt:focus-visible { outline: 2px solid var(--amber, #fbbf24); outline-offset: 2px; }
-.mpoll-opt.sel { border-color: var(--amber, #fbbf24); background: rgba(251,191,36,.10); }
+.mpoll-opt:hover { border-color: var(--amber, #2639f9); background: rgba(255,255,255,.05); }
+.mpoll-opt:focus-visible { outline: 2px solid var(--amber, #2639f9); outline-offset: 2px; }
+.mpoll-opt.sel { border-color: var(--amber, #2639f9); background: rgba(38,57,249,.10); }
 .mpoll-emoji { font-size: 1.25rem; flex: 0 0 auto; }
 .mpoll-label { flex: 1; }
 .mpoll-vote, .mpoll-again {
   display: block; width: 100%; margin-top: .9rem; padding: .8rem;
   border: 0; border-radius: 12px; cursor: pointer;
-  font-size: 1rem; font-weight: 800; color: #0a0c14;
-  background: linear-gradient(100deg, var(--acc1, #fdba74), var(--acc2, #a3e635));
+  font-size: 1rem; font-weight: 800; color: #140a0c;
+  background: linear-gradient(100deg, var(--acc1, #7682fb), var(--acc2, #a3e635));
   transition: transform .15s, opacity .15s;
 }
 .mpoll-vote:hover:not(:disabled), .mpoll-again:hover { transform: translateY(-1px); }
 .mpoll-vote:disabled { opacity: .45; cursor: not-allowed; transform: none; }
 .mpoll-note {
-  margin-top: .7rem; font-size: .88rem; color: #fbbf24;
-  border: 1px dashed rgba(251,191,36,.4); border-radius: 10px; padding: .6rem .8rem;
+  margin-top: .7rem; font-size: .88rem; color: #2639f9;
+  border: 1px dashed rgba(38,57,249,.4); border-radius: 10px; padding: .6rem .8rem;
 }
 .mpoll-bars { display: grid; gap: .6rem; margin-top: .4rem; }
 .mpoll-rowtop {
   display: flex; justify-content: space-between; gap: .8rem;
-  font-size: .9rem; color: var(--ink, #edf0f9); margin-bottom: .28rem;
+  font-size: .9rem; color: var(--ink, #f9edef); margin-bottom: .28rem;
 }
-.mpoll-pct { font-weight: 800; color: var(--muted, #a9b1c9); flex: 0 0 auto; }
-.mpoll-mine { color: var(--amber, #fbbf24); font-weight: 700; font-size: .8rem; }
+.mpoll-pct { font-weight: 800; color: var(--muted, #c9a9ae); flex: 0 0 auto; }
+.mpoll-mine { color: var(--amber, #2639f9); font-weight: 700; font-size: .8rem; }
 .mpoll-track {
   height: 10px; border-radius: 999px; overflow: hidden;
   background: rgba(255,255,255,.07);
 }
 .mpoll-fill {
   height: 100%; width: 0; border-radius: 999px;
-  background: linear-gradient(90deg, var(--acc1, #fdba74), var(--acc2, #a3e635), var(--acc3, #fb923c));
+  background: linear-gradient(90deg, var(--acc1, #7682fb), var(--acc2, #a3e635), var(--acc3, #3d4efa));
   transition: width .9s cubic-bezier(.22,.8,.3,1);
 }
-.mpoll-row.mine .mpoll-fill { box-shadow: 0 0 10px rgba(251,191,36,.45); }
+.mpoll-row.mine .mpoll-fill { box-shadow: 0 0 10px rgba(38,57,249,.45); }
 .mpoll-total {
-  margin-top: .8rem; font-size: .85rem; color: var(--faint, #7f88a5);
+  margin-top: .8rem; font-size: .85rem; color: var(--faint, #a57f85);
 }
-.mpoll-sub { margin-top: .8rem; font-size: .9rem; color: var(--muted, #a9b1c9); }
-.mpoll-count { font-weight: 800; color: var(--ink, #edf0f9); font-variant-numeric: tabular-nums; }
+.mpoll-sub { margin-top: .8rem; font-size: .9rem; color: var(--muted, #c9a9ae); }
+.mpoll-count { font-weight: 800; color: var(--ink, #f9edef); font-variant-numeric: tabular-nums; }
 .mpoll-disc {
   margin-top: .9rem; padding-top: .7rem;
   border-top: 1px dashed var(--line, rgba(255,255,255,.09));
-  font-size: .76rem; line-height: 1.5; color: var(--faint, #7f88a5);
+  font-size: .76rem; line-height: 1.5; color: var(--faint, #a57f85);
 }
-.mpoll-loading { color: var(--faint, #7f88a5); font-size: .9rem; padding: .6rem 0; }
+.mpoll-loading { color: var(--faint, #a57f85); font-size: .9rem; padding: .6rem 0; }
 @media (prefers-reduced-motion: reduce) {
   .mpoll-opt, .mpoll-vote, .mpoll-again, .mpoll-fill, .mpoll-teaser-chev,
   .mpoll-bodywrap, .mpoll-body { transition: none; }
@@ -489,7 +515,7 @@ mini-poll { display: block; }
 <svg class="sr-only" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="triGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#BAE6FD"/><stop offset="50%" stop-color="#0284C7"/><stop offset="100%" stop-color="#0C4A6E"/>
+      <stop offset="0%" stop-color="#bafdd2"/><stop offset="50%" stop-color="#c40526"/><stop offset="100%" stop-color="#6e0c1c"/>
     </linearGradient>
   </defs>
 </svg>
@@ -515,14 +541,16 @@ mini-poll { display: block; }
   <a href="#ch3"><span class="n">03</span>How Preservation Works</a>
   <a href="#ch4"><span class="n">04</span>What Science Supports</a>
   <a href="#ch5"><span class="n">05</span>What People Get Wrong</a>
-  <a href="#ch6"><span class="n">06</span>Risks & Realities</a>
-  <a href="#ch7"><span class="n">07</span>Glossary</a>
-  <a href="#ch8"><span class="n">08</span>Takeaways</a>
+  <a href="#ch6"><span class="n">06</span>Potential Benefits</a>
+  <a href="#ch7"><span class="n">07</span>Who It Suits</a>
+  <a href="#ch8"><span class="n">08</span>Risks & Realities</a>
+  <a href="#ch9"><span class="n">09</span>Understanding BAC Water Terminology</a>
+  <a href="#ch10"><span class="n">10</span>Takeaways</a>
   <div class="mini"><span>Read</span><span id="tocPct">0%</span></div>
   <div class="mini-bar"><i id="tocBar"></i></div>
 </aside>
 <nav class="chapters" aria-label="Chapters"><div class="rail" id="rail">
-  <a href="#ch1">01 · What It Is</a><a href="#ch2">02 · Why Labs Use It</a><a href="#ch3">03 · Preservation</a><a href="#ch4">04 · The Science</a><a href="#ch5">05 · Myths</a><a href="#ch6">06 · Risks</a><a href="#ch7">07 · Glossary</a><a href="#ch8">08 · Takeaways</a>
+  <a href="#ch1">01 · What It Is</a><a href="#ch2">02 · Why Labs Use It</a><a href="#ch3">03 · Preservation</a><a href="#ch4">04 · The Science</a><a href="#ch5">05 · Myths</a><a href="#ch6">06 · Benefits</a><a href="#ch7">07 · Who It Suits</a><a href="#ch8">08 · Risks</a><a href="#ch9">09 · BAC Water Terminology</a><a href="#ch10">10 · Takeaways</a>
 </div></nav>
 
 <header class="hero">
@@ -550,6 +578,12 @@ mini-poll { display: block; }
   <span class="eyebrow"><span class="n">01</span>What it is</span>
   <h2>What <span class="hl">bacteriostatic water</span> actually is</h2>
   <p class="lede">Two ingredients, two jobs. <strong>Sterile water</strong> is the diluent; <strong>0.9% benzyl alcohol</strong> is the preservative. The name tells you exactly what the preservative does: <strong>stasis</strong>, not <strong>cide</strong> — it stalls bacteria, it doesn't execute them.</p>
+<div class="pct-callout reveal">
+<div class="pct-card balc"><div class="bignum">0.9%</div><h4>Benzyl alcohol — this bottle</h4><p>A preservative (an aromatic alcohol). Its only job: stall bacterial growth in a multi-entry vial.</p></div>
+<div class="pct-vs">≠</div>
+<div class="pct-card salt"><div class="bignum">0.9%</div><h4>Sodium chloride — NOT this bottle</h4><p>Table salt. "0.9% NaCl" is normal saline — a completely different product with no preservative at all.</p></div>
+</div>
+<div class="diagram reveal"><svg viewBox="0 0 640 210" role="img" aria-label="Composition diagram"><g font-size="13" font-weight="800" text-anchor="middle"><text x="320" y="28" fill="#f9edef">ONE BOTTLE, TWO COMPONENTS — SEPARATELY</text><rect x="40" y="46" width="540" height="34" rx="17" fill="#c40526" opacity="0.85"/><text x="290" y="69" fill="#ffffff" font-size="12">WATER — THE SOLVENT · 99.1%</text><rect x="530" y="46" width="50" height="34" rx="10" fill="#0919b4"/><text x="555" y="69" fill="#ffffff" font-size="10">0.9%</text><text x="60" y="104" fill="#c9a9ae" font-size="11" font-weight="600" text-anchor="start">Water dissolves and dilutes. It does the carrying.</text><text x="555" y="104" fill="#2639f9" font-size="11" font-weight="700" text-anchor="end">Benzyl alcohol</text><text x="555" y="120" fill="#c9a9ae" font-size="11" font-weight="600" text-anchor="end">preserves. Nothing more.</text><g opacity="0.9"><circle cx="90" cy="160" r="5" fill="#bafdd2"/><circle cx="130" cy="172" r="5" fill="#bafdd2"/><circle cx="170" cy="160" r="5" fill="#bafdd2"/><circle cx="210" cy="172" r="5" fill="#bafdd2"/><circle cx="250" cy="160" r="5" fill="#bafdd2"/><circle cx="290" cy="172" r="5" fill="#bafdd2"/><circle cx="330" cy="160" r="5" fill="#bafdd2"/><circle cx="370" cy="172" r="5" fill="#bafdd2"/><polygon points="440,166 446,156 454,156 460,166 454,176 446,176" fill="#2639f9"/><polygon points="510,166 516,156 524,156 530,166 524,176 516,176" fill="#2639f9"/></g><text x="320" y="198" fill="#a57f85" font-size="10.5" font-weight="600">water molecules (blue) · benzyl alcohol molecules (amber) — the preservative is never the active ingredient</text></g></svg><div class="cap">Composition, visually separated: water is the solvent, benzyl alcohol the preservative. Neither is a drug.</div></div>
 <div class="grid3">
 <div class="card sky reveal"><h3>Sterile water: the base</h3><p>Water purified and <strong>sterilized</strong> — no living microbes at the time of manufacture. The diluent half of the job: a clean, neutral liquid for dissolving and diluting lab materials.</p></div>
 <div class="card teal reveal"><h3>Benzyl alcohol 0.9%: the guard</h3><p>An aromatic alcohol that <strong>inhibits bacterial growth</strong> at low concentrations. It disrupts microbial membranes enough to stop colonies establishing — a preservative, not a disinfectant.</p></div>
@@ -566,7 +600,7 @@ mini-poll { display: block; }
   <span class="eyebrow"><span class="n">02</span>Why labs use it</span>
   <h2>Why laboratories <span class="hl">bother with preservative</span></h2>
   <p class="lede">If sterile technique were perfect, no preservative would be needed. Laboratories are staffed by humans — so <strong>preserved diluents are engineered humility</strong>: a backup for the inevitable imperfect moment.</p>
-<div class="diagram reveal"><svg viewBox="0 0 640 196" role="img" aria-label="Timeline"><line x1="40" y1="110" x2="600" y2="110" stroke="#3a4160" stroke-width="3" class="flowseq"/><circle cx="70" cy="110" r="26" fill="none" stroke="#BAE6FD" stroke-width="2" class="ringp"/><circle cx="70" cy="110" r="13" fill="#BAE6FD"/><text x="70" y="60" fill="#BAE6FD" font-size="13" font-weight="800" text-anchor="middle">1900s</text><text x="70" y="160" fill="#a9b1c9" font-size="11.5" font-weight="700" text-anchor="middle">Preserved vials</text><text x="70" y="178" fill="#7f88a5" font-size="10.5" text-anchor="middle">Antimicrobial preservatives enter multi-dose injectables</text><circle cx="195" cy="110" r="26" fill="none" stroke="#0284C7" stroke-width="2" class="ringp"/><circle cx="195" cy="110" r="13" fill="#0284C7"/><text x="195" y="60" fill="#0284C7" font-size="13" font-weight="800" text-anchor="middle">Mid-1900s</text><text x="195" y="160" fill="#a9b1c9" font-size="11.5" font-weight="700" text-anchor="middle">Benzyl alcohol</text><text x="195" y="178" fill="#7f88a5" font-size="10.5" text-anchor="middle">Adopted as a low-concentration preservative in diluents</text><circle cx="320" cy="110" r="26" fill="none" stroke="#0C4A6E" stroke-width="2" class="ringp"/><circle cx="320" cy="110" r="13" fill="#0C4A6E"/><text x="320" y="60" fill="#0C4A6E" font-size="13" font-weight="800" text-anchor="middle">1980s</text><text x="320" y="160" fill="#a9b1c9" font-size="11.5" font-weight="700" text-anchor="middle">Neonate warning</text><text x="320" y="178" fill="#7f88a5" font-size="10.5" text-anchor="middle">Toxicity reports in premature infants sharpen labeling</text><circle cx="445" cy="110" r="26" fill="none" stroke="#0284C7" stroke-width="2" class="ringp"/><circle cx="445" cy="110" r="13" fill="#0284C7"/><text x="445" y="60" fill="#0284C7" font-size="13" font-weight="800" text-anchor="middle">Today</text><text x="445" y="160" fill="#a9b1c9" font-size="11.5" font-weight="700" text-anchor="middle">USP standards</text><text x="445" y="178" fill="#7f88a5" font-size="10.5" text-anchor="middle">Preservative efficacy tested against pharmacopeia standards</text><circle cx="570" cy="110" r="26" fill="none" stroke="#BAE6FD" stroke-width="2" class="ringp"/><circle cx="570" cy="110" r="13" fill="#BAE6FD"/><text x="570" y="60" fill="#BAE6FD" font-size="13" font-weight="800" text-anchor="middle">Now</text><text x="570" y="160" fill="#a9b1c9" font-size="11.5" font-weight="700" text-anchor="middle">Forum staple</text><text x="570" y="178" fill="#7f88a5" font-size="10.5" text-anchor="middle">The default diluent discussed in peptide communities</text></svg><div class="cap">A century of preserved vials — and the lessons learned along the way.</div></div>
+<div class="diagram reveal"><svg viewBox="0 0 640 196" role="img" aria-label="Timeline"><line x1="40" y1="110" x2="600" y2="110" stroke="#603a40" stroke-width="3" class="flowseq"/><circle cx="70" cy="110" r="26" fill="none" stroke="#bafdd2" stroke-width="2" class="ringp"/><circle cx="70" cy="110" r="13" fill="#bafdd2"/><text x="70" y="60" fill="#bafdd2" font-size="13" font-weight="800" text-anchor="middle">1900s</text><text x="70" y="158" fill="#c9a9ae" font-size="11.5" font-weight="700" text-anchor="middle">Preserved vials</text><text x="70" y="174" fill="#a57f85" font-size="10" text-anchor="middle">Preservatives enter</text><text x="70" y="188" fill="#a57f85" font-size="10" text-anchor="middle">multi-dose vials</text><circle cx="195" cy="110" r="26" fill="none" stroke="#c40526" stroke-width="2" class="ringp"/><circle cx="195" cy="110" r="13" fill="#c40526"/><text x="195" y="60" fill="#c40526" font-size="13" font-weight="800" text-anchor="middle">Mid-1900s</text><text x="195" y="158" fill="#c9a9ae" font-size="11.5" font-weight="700" text-anchor="middle">Benzyl alcohol</text><text x="195" y="174" fill="#a57f85" font-size="10" text-anchor="middle">adopted as preservative</text><text x="195" y="188" fill="#a57f85" font-size="10" text-anchor="middle">in diluents</text><circle cx="320" cy="110" r="26" fill="none" stroke="#6e0c1c" stroke-width="2" class="ringp"/><circle cx="320" cy="110" r="13" fill="#6e0c1c"/><text x="320" y="60" fill="#6e0c1c" font-size="13" font-weight="800" text-anchor="middle">1980s</text><text x="320" y="158" fill="#c9a9ae" font-size="11.5" font-weight="700" text-anchor="middle">Neonate warning</text><text x="320" y="174" fill="#a57f85" font-size="10" text-anchor="middle">toxicity reports</text><text x="320" y="188" fill="#a57f85" font-size="10" text-anchor="middle">in premature infants</text><circle cx="445" cy="110" r="26" fill="none" stroke="#c40526" stroke-width="2" class="ringp"/><circle cx="445" cy="110" r="13" fill="#c40526"/><text x="445" y="60" fill="#c40526" font-size="13" font-weight="800" text-anchor="middle">Today</text><text x="445" y="158" fill="#c9a9ae" font-size="11.5" font-weight="700" text-anchor="middle">USP standards</text><text x="445" y="174" fill="#a57f85" font-size="10" text-anchor="middle">efficacy tested to</text><text x="445" y="188" fill="#a57f85" font-size="10" text-anchor="middle">pharmacopeia standards</text><circle cx="570" cy="110" r="26" fill="none" stroke="#bafdd2" stroke-width="2" class="ringp"/><circle cx="570" cy="110" r="13" fill="#bafdd2"/><text x="570" y="60" fill="#bafdd2" font-size="13" font-weight="800" text-anchor="middle">Now</text><text x="570" y="158" fill="#c9a9ae" font-size="11.5" font-weight="700" text-anchor="middle">Forum staple</text><text x="570" y="174" fill="#a57f85" font-size="10" text-anchor="middle">the default diluent</text><text x="570" y="188" fill="#a57f85" font-size="10" text-anchor="middle">in peptide communities</text></svg><div class="cap">A century of preserved vials — and the lessons learned along the way.</div></div>
 <div class="kv reveal"><span class="k s">Repeated access is the risk</span><p>A vial opened once and used immediately barely needs preservation. A vial <strong>entered many times over days or weeks</strong> accumulates contamination chances — that's the scenario the preservative is built for.</p></div>
 <div class="kv reveal"><span class="k t">Preservative ≠ sterile technique</span><p>Labs still use <strong>aseptic technique</strong> — clean benches, sterile needles, minimal exposure. The preservative is the seatbelt, not the driver.</p></div>
 <div class="kv reveal"><span class="k o">Why not stronger?</span><p>More alcohol would preserve better — and <strong>irritate tissue more</strong>. The 0.9% concentration is a decades-old compromise between antimicrobial effect and tolerability.</p></div>
@@ -581,11 +615,12 @@ mini-poll { display: block; }
   <span class="eyebrow"><span class="n">03</span>How preservation works</span>
   <h2>The <span class="hl">guard on duty</span></h2>
   <p class="lede">Benzyl alcohol doesn't nuke microbes. It <strong>makes the neighborhood inhospitable</strong> — and the distinction matters more than people think.</p>
-<div class="diagram reveal"><svg viewBox="0 0 640 196" role="img" aria-label="Four-step mechanism diagram"><g font-size="13" font-weight="800" text-anchor="middle"><rect x="20" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#BAE6FD" stroke-width="2"/><text x="84" y="105" fill="#BAE6FD">1 · ENTRY</text><text x="84" y="130" fill="#a9b1c9" font-size="11" font-weight="600">Microbe arrives</text><text x="84" y="146" fill="#a9b1c9" font-size="11" font-weight="600">via needle or air</text><rect x="172" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#0284C7" stroke-width="2"/><text x="236" y="105" fill="#0284C7">2 · EXPOSURE</text><text x="236" y="130" fill="#a9b1c9" font-size="11" font-weight="600">Meets benzyl alcohol</text><text x="236" y="146" fill="#a9b1c9" font-size="11" font-weight="600">membrane disrupted</text><rect x="324" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#BAE6FD" stroke-width="2"/><text x="388" y="105" fill="#BAE6FD">3 · STALL</text><text x="388" y="130" fill="#a9b1c9" font-size="11" font-weight="600">Growth inhibited</text><text x="388" y="146" fill="#a9b1c9" font-size="11" font-weight="600">no colony forms</text><rect x="476" y="60" width="128" height="120" rx="14" fill="#151b36" stroke="#0284C7" stroke-width="2"/><text x="540" y="105" fill="#0284C7">4 · LIMITS</text><text x="540" y="130" fill="#a9b1c9" font-size="11" font-weight="600">Not sterilized</text><text x="540" y="146" fill="#a9b1c9" font-size="11" font-weight="600">some organisms persist</text></g><g stroke="#7f88a5" stroke-width="2" fill="none" class="flow" stroke-dasharray="6 6"><path d="M148 120 h24"/><path d="M300 120 h24"/><path d="M452 120 h24"/></g></svg><div class="cap">Preservation in four steps: entry → exposure → stall → limits. Step four is the one people forget.</div></div>
-<div class="ebar"><div class="row"><span class="t">Bacterial growth inhibition</span><span class="v">effective</span></div><div class="track"><div class="fill" style="--w:80%;background:linear-gradient(90deg,#0284C7,#BAE6FD)"></div></div><div class="note">Benzyl alcohol at 0.9% reliably suppresses common bacterial contaminants in preserved vials.</div></div>
-<div class="ebar"><div class="row"><span class="t">Fungal coverage</span><span class="v">partial</span></div><div class="track"><div class="fill" style="--w:55%;background:linear-gradient(90deg,#0284C7,#BAE6FD)"></div></div><div class="note">Some fungi and yeasts are less obliging — preservatives have a spectrum, not a blanket.</div></div>
-<div class="ebar"><div class="row"><span class="t">Endotoxin removal</span><span class="v">none</span></div><div class="track"><div class="fill" style="--w:5%;background:linear-gradient(90deg,#3a4160,#3a4160)"></div></div><div class="note">Dead bacteria leave endotoxins behind; preservatives do nothing about toxins already present.</div></div>
-<div class="ebar"><div class="row"><span class="t">Sterilization</span><span class="v">not its job</span></div><div class="track"><div class="fill" style="--w:3%;background:linear-gradient(90deg,#0C4A6E,#0284C7)"></div></div><div class="note">Bacteriostatic ≠ bactericidal. It stalls growth; it does not reliably kill.</div></div>
+<div class="diagram reveal"><svg viewBox="0 0 640 300" role="img" aria-label="Dissolution sequence diagram"><defs><polygon id="bzw" points="0,-7 6,-3.5 6,3.5 0,7 -6,3.5 -6,-3.5" fill="#2639f9" opacity="0.9"/></defs><g font-size="13" font-weight="800" text-anchor="middle"><text x="320" y="26" fill="#f9edef">DISSOLVING, STEP BY STEP — PHYSICAL, NOT MAGICAL</text></g><g text-anchor="middle"><g class="seqr1"><rect x="20" y="44" width="134" height="216" rx="12" fill="none" stroke="#bafdd2" stroke-width="2" opacity="0.9"/><text x="87" y="70" fill="#bafdd2" font-size="12" font-weight="800">1 · DRY</text><rect x="62" y="150" width="50" height="76" rx="6" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="70" y="134" width="34" height="18" rx="4" fill="none" stroke="#a57f85" stroke-width="3"/><polygon points="70,210 104,210 98,196 76,196" fill="#714d53"/><polygon points="76,196 98,196 92,184 80,184" fill="#714d53"/><text x="87" y="240" fill="#c9a9ae" font-size="10" font-weight="600">dry lyophilized</text><text x="87" y="254" fill="#a57f85" font-size="10" font-weight="600">material in vial</text></g><g class="seqr2"><rect x="174" y="44" width="134" height="216" rx="12" fill="none" stroke="#bafdd2" stroke-width="2" opacity="0.9"/><text x="241" y="70" fill="#bafdd2" font-size="12" font-weight="800">2 · WET</text><rect x="216" y="150" width="50" height="76" rx="6" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="224" y="134" width="34" height="18" rx="4" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="219" y="176" width="44" height="47" rx="6" fill="#c40526" opacity="0.45"/><circle cx="241" cy="140" r="4" fill="#bafdd2"><animateMotion dur="1.6s" repeatCount="indefinite" path="M0,0 L0,60"/></circle><circle cx="231" cy="132" r="3.4" fill="#bafdd2"><animateMotion dur="1.9s" repeatCount="indefinite" path="M0,0 L6,72"/></circle><circle cx="251" cy="136" r="3.4" fill="#bafdd2"><animateMotion dur="2.1s" repeatCount="indefinite" path="M0,0 L-6,66"/></circle><text x="241" y="240" fill="#c9a9ae" font-size="10" font-weight="600">diluent surrounds</text><text x="241" y="254" fill="#a57f85" font-size="10" font-weight="600">the dry material</text></g><g class="seqr3"><rect x="328" y="44" width="134" height="216" rx="12" fill="none" stroke="#bafdd2" stroke-width="2" opacity="0.9"/><text x="395" y="70" fill="#bafdd2" font-size="12" font-weight="800">3 · ZOOM IN</text><circle cx="395" cy="160" r="58" fill="#200d10" stroke="#2639f9" stroke-width="2" stroke-dasharray="5 5"/><polygon points="383,150 407,150 401,168 389,168" fill="#714d53"><animateTransform attributeName="transform" type="translate" values="0 0;0 3;0 0" dur="2.4s" repeatCount="indefinite"/></polygon><polygon points="389,168 401,168 397,182 393,182" fill="#603a40"><animateTransform attributeName="transform" type="translate" values="0 0;0 -2;0 0" dur="2.9s" repeatCount="indefinite"/></polygon><circle cx="355" cy="140" r="5" fill="#bafdd2"><animateMotion dur="2.6s" repeatCount="indefinite" path="M0,0 L22,14"/></circle><circle cx="437" cy="182" r="5" fill="#bafdd2"><animateMotion dur="3.1s" repeatCount="indefinite" path="M0,0 L-20,-14"/></circle><circle cx="395" cy="112" r="5" fill="#bafdd2"><animateMotion dur="2.8s" repeatCount="indefinite" path="M0,0 L0,20"/></circle><use href="#bzw" x="352" y="200"><animateMotion dur="4.5s" repeatCount="indefinite" path="M0,0 L80,0"/></use><text x="395" y="240" fill="#c9a9ae" font-size="10" font-weight="600">molecules only</text><text x="395" y="254" fill="#a57f85" font-size="10" font-weight="600">after a zoom</text></g><g class="seqr4"><rect x="482" y="44" width="134" height="216" rx="12" fill="none" stroke="#bafdd2" stroke-width="2" opacity="0.9"/><text x="549" y="70" fill="#bafdd2" font-size="12" font-weight="800">4 · UNIFORM</text><rect x="524" y="150" width="50" height="76" rx="6" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="532" y="134" width="34" height="18" rx="4" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="527" y="158" width="44" height="65" rx="6" fill="#c40526" opacity="0.5"/><g fill="#bafdd2" opacity="0.85"><circle cx="536" cy="170" r="2.2"/><circle cx="548" cy="178" r="2.2"/><circle cx="560" cy="170" r="2.2"/><circle cx="542" cy="192" r="2.2"/><circle cx="554" cy="198" r="2.2"/><circle cx="564" cy="190" r="2.2"/><circle cx="536" cy="208" r="2.2"/><circle cx="550" cy="214" r="2.2"/></g><use href="#bzw" x="536" y="182"/><use href="#bzw" x="560" y="206"/><text x="549" y="240" fill="#c9a9ae" font-size="10" font-weight="600">homogeneous</text><text x="549" y="254" fill="#a57f85" font-size="10" font-weight="600">solution — evenly spread</text></g></g><g stroke="#a57f85" stroke-width="2" fill="none" class="flow" stroke-dasharray="6 6"><path d="M154 160 h20"/><path d="M308 160 h20"/><path d="M462 160 h20"/></g><g font-size="10.5" font-weight="600" text-anchor="middle"><text x="320" y="284" fill="#2639f9">benzyl alcohol (amber) stays separate — it never binds the dry material</text><text x="320" y="298" fill="#c9a9ae">or "activates" it. Dissolving changes physics, not pharmacology.</text></g></svg><div class="cap">Dry material → wetting → dispersal → uniform solution. Dissolving is physical, not magical — nothing here gets "activated."</div></div>
+<div class="diagram reveal"><svg viewBox="0 0 640 196" role="img" aria-label="Four-step mechanism diagram"><g font-size="13" font-weight="800" text-anchor="middle"><rect x="20" y="60" width="128" height="120" rx="14" fill="#36151b" stroke="#bafdd2" stroke-width="2"/><text x="84" y="105" fill="#bafdd2">1 · ENTRY</text><text x="84" y="130" fill="#c9a9ae" font-size="11" font-weight="600">Microbe arrives</text><text x="84" y="146" fill="#c9a9ae" font-size="11" font-weight="600">via needle or air</text><rect x="172" y="60" width="128" height="120" rx="14" fill="#36151b" stroke="#c40526" stroke-width="2"/><text x="236" y="105" fill="#c40526">2 · EXPOSURE</text><text x="236" y="130" fill="#c9a9ae" font-size="11" font-weight="600">Meets benzyl alcohol</text><text x="236" y="146" fill="#c9a9ae" font-size="11" font-weight="600">membrane disrupted</text><rect x="324" y="60" width="128" height="120" rx="14" fill="#36151b" stroke="#bafdd2" stroke-width="2"/><text x="388" y="105" fill="#bafdd2">3 · STALL</text><text x="388" y="130" fill="#c9a9ae" font-size="11" font-weight="600">Growth inhibited</text><text x="388" y="146" fill="#c9a9ae" font-size="11" font-weight="600">no colony forms</text><rect x="476" y="60" width="128" height="120" rx="14" fill="#36151b" stroke="#c40526" stroke-width="2"/><text x="540" y="105" fill="#c40526">4 · LIMITS</text><text x="540" y="130" fill="#c9a9ae" font-size="11" font-weight="600">Not sterilized</text><text x="540" y="146" fill="#c9a9ae" font-size="11" font-weight="600">some organisms persist</text></g><g stroke="#a57f85" stroke-width="2" fill="none" class="flow" stroke-dasharray="6 6"><path d="M148 120 h24"/><path d="M300 120 h24"/><path d="M452 120 h24"/></g></svg><div class="cap">Preservation in four steps: entry → exposure → stall → limits. Step four is the one people forget.</div></div>
+<div class="ebar reveal"><div class="row"><span class="t">Bacterial growth inhibition</span><span class="v">effective</span></div><div class="track"><div class="fill" style="--w:80%;background:linear-gradient(90deg,#c40526,#bafdd2)"></div></div><div class="note">Benzyl alcohol at 0.9% reliably suppresses common bacterial contaminants in preserved vials.</div></div>
+<div class="ebar reveal"><div class="row"><span class="t">Fungal coverage</span><span class="v">partial</span></div><div class="track"><div class="fill" style="--w:55%;background:linear-gradient(90deg,#c40526,#bafdd2)"></div></div><div class="note">Some fungi and yeasts are less obliging — preservatives have a spectrum, not a blanket.</div></div>
+<div class="ebar reveal"><div class="row"><span class="t">Endotoxin removal</span><span class="v">none</span></div><div class="track"><div class="fill" style="--w:5%;background:linear-gradient(90deg,#603a40,#603a40)"></div></div><div class="note">Dead bacteria leave endotoxins behind; preservatives do nothing about toxins already present.</div></div>
+<div class="ebar reveal"><div class="row"><span class="t">Sterilization</span><span class="v">not its job</span></div><div class="track"><div class="fill" style="--w:3%;background:linear-gradient(90deg,#6e0c1c,#c40526)"></div></div><div class="note">Bacteriostatic ≠ bactericidal. It stalls growth; it does not reliably kill.</div></div>
 <div class="plain reveal"><div class="plabel">Plain English</div><p>The guard's job description: <strong>stop squatters, not demolish buildings</strong>. Bacteriostatic water keeps a clean vial clean-ish between uses. It cannot rescue a contaminated one — and it was never meant to.</p></div>
 </section>
 <mini-poll slug="bac-water-mini-ch3"
@@ -613,24 +648,87 @@ mini-poll { display: block; }
   <span class="eyebrow"><span class="n">05</span>What people get wrong</span>
   <h2>What people <span class="hl">get wrong</span></h2>
   <p class="lede">In forums, bacteriostatic water has acquired <strong>magical properties</strong> it never had. The recurring myths — each stamped unverified, each with the correction.</p>
-<div class="ulegend reveal"><span class="udot" role="img" aria-label="Unverified anecdote"></span><p><strong>Unverified anecdote</strong> — the pulsing dot marks a paraphrased recurring theme from forums: not verified, not lab guidance.</p></div>
-<div class="anec-grid">
-<div class="anec reveal"><div class="anec-head"><h4>'It sterilizes things'</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>“Just use bac water and you're sterile.” <strong>Caveat:</strong> backwards. Sterile water starts sterile; the preservative only <em>maintains</em> — it cannot sterilize anything contaminated.</p><div class="caveat"><strong>Caveat:</strong> the most common and most wrong belief.<br><strong>Pattern:</strong> Bacteriostatic ≠ bactericidal, and never was.</div></div>
-<div class="anec reveal"><div class="anec-head"><h4>'It never expires'</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>“The alcohol keeps it good forever.” <strong>Caveat:</strong> preservatives degrade, seals fail, and labeled use windows exist for a reason — 'forever' is not on any label.</p><div class="caveat"><strong>Caveat:</strong> expiration dates are data, not suggestions.<br><strong>Pattern:</strong> Time degrades everything, including preservatives.</div></div>
-<div class="anec reveal"><div class="anec-head"><h4>'Any clear water works'</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>“Sterile water, distilled water, same thing.” <strong>Caveat:</strong> sterility, endotoxin limits, and preservative content are specifications, not vibes — 'clear' is not a spec.</p><div class="caveat"><strong>Caveat:</strong> clarity is not purity.<br><strong>Pattern:</strong> You can't see microbes or endotoxins.</div></div>
-<div class="anec reveal"><div class="anec-head"><h4>'More alcohol = safer'</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>“If 0.9% is good, 2% is better.” <strong>Caveat:</strong> higher concentrations irritate tissue and the 0.9% level is a tested compromise — freelancing the formula is not an upgrade.</p><div class="caveat"><strong>Caveat:</strong> the dose-makes-the-poison principle, ignored.<br><strong>Pattern:</strong> Preservative concentration is engineered, not decorative.</div></div>
-<div class="anec reveal"><div class="anec-head"><h4>'Cloudy is fine'</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>“A little cloudy, probably still okay.” <strong>Caveat:</strong> cloudiness can signal microbial growth or precipitation — the universal lab rule is: when in doubt, discard.</p><div class="caveat"><strong>Caveat:</strong> the sunk-cost fallacy in liquid form.<br><strong>Pattern:</strong> Cloudy vials are a discard, not a debate.</div></div>
-<div class="anec reveal"><div class="anec-head"><h4>'The preservative protects me'</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>“With bac water, contamination can't hurt me.” <strong>Caveat:</strong> the preservative protects the <em>vial's contents between uses</em> — it is not a safety device for the person, and it doesn't cover every organism or toxin.</p><div class="caveat"><strong>Caveat:</strong> confusing product protection with personal protection.<br><strong>Pattern:</strong> A seatbelt for the vial, not a shield for you.</div></div>
+<p class="lede">The most consequential confusion in the whole diluent aisle: <strong>two different 0.9%s, three different bottles</strong>. Here's how to never mix them up — and why the right choice depends on the compound and its formulation, not the label's vibes.</p>
+<div class="grid3">
+<div class="card sky reveal"><h3>BAC Water 0.9%</h3><svg viewBox="0 0 200 190" role="img" aria-label="BAC water vial" style="display:block;width:100%;height:auto"><rect x="70" y="52" width="60" height="118" rx="8" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="82" y="34" width="36" height="20" rx="5" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="74" y="86" width="52" height="80" rx="8" fill="#c40526" opacity="0.4"/><g><polygon points="0,-6 5,-3 5,3 0,6 -5,3 -5,-3" fill="#2639f9"><animateMotion dur="4s" repeatCount="indefinite" path="M88,110 L118,110 L104,148 L88,148 Z"/></polygon></g><g font-size="11" font-weight="800" text-anchor="middle"><text x="100" y="22" style="fill:var(--amber)">0.9% BENZYL ALCOHOL</text><text x="100" y="182" style="fill:var(--muted)" font-size="9.5" font-weight="600">preservative · multi-entry vials</text></g></svg><p>Water plus a <strong>preservative</strong>. The amber molecules are benzyl alcohol, distributed through the water — guarding the vial, never touching the pharmacology.</p></div>
+<div class="card teal reveal"><h3>Sterile Water</h3><svg viewBox="0 0 200 190" role="img" aria-label="Sterile water vial" style="display:block;width:100%;height:auto"><rect x="70" y="52" width="60" height="118" rx="8" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="82" y="34" width="36" height="20" rx="5" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="74" y="86" width="52" height="80" rx="8" fill="#c40526" opacity="0.4"/><text x="100" y="126" style="fill:var(--faint)" font-size="15" font-weight="800">∅</text><g font-size="11" font-weight="800" text-anchor="middle"><text x="100" y="22" style="fill:var(--muted)">NO PRESERVATIVE</text><text x="100" y="182" style="fill:var(--muted)" font-size="9.5" font-weight="600">sterile · no backup after opening</text></g></svg><p>Just sterile water — <strong>no guard on duty</strong>. Once opened, nothing stalls what sneaks in. Not interchangeable with preserved water.</p></div>
+<div class="card org reveal"><h3>0.9% Sodium Chloride</h3><svg viewBox="0 0 200 190" role="img" aria-label="Normal saline vial" style="display:block;width:100%;height:auto"><rect x="70" y="52" width="60" height="118" rx="8" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="82" y="34" width="36" height="20" rx="5" fill="none" stroke="#a57f85" stroke-width="3"/><rect x="74" y="86" width="52" height="80" rx="8" fill="#c40526" opacity="0.4"/><g font-size="9" font-weight="800" text-anchor="middle"><g><circle cx="94" cy="108" r="9" fill="#c40526"/><text x="94" y="112" fill="#fff">Na+</text><animateMotion dur="5s" repeatCount="indefinite" path="M0,0 L16,14 L2,30"/></g><g><circle cx="110" cy="132" r="9" fill="#6e0c1c"/><text x="110" y="136" fill="#fff">Cl-</text><animateMotion dur="6s" repeatCount="indefinite" path="M0,0 L-12,12 L-2,26"/></g></g><g font-size="11" font-weight="800" text-anchor="middle"><text x="100" y="22" style="fill:var(--sky)">0.9% SODIUM CHLORIDE</text><text x="100" y="182" style="fill:var(--muted)" font-size="9.5" font-weight="600">salt water · no preservative</text></g></svg><p>Sodium and chloride ions, <strong>dissolved separately</strong> in water. "Normal saline" — a different solute, a different product, same misleading percentage.</p></div>
 </div>
-<div class="folk-note reveal"><p>The through-line: <strong>people upgrade a backup system into a guarantee</strong>. Bacteriostatic water is a sensible default with tested limits — every myth above is someone forgetting the second half of that sentence.</p></div>
+<div class="diagram reveal"><div class="twrap"><table class="trial"><thead><tr><th></th><th>BAC Water 0.9%</th><th>Sterile Water</th><th>0.9% NaCl Saline</th></tr></thead><tbody><tr><td>The "0.9%" is</td><td><strong>benzyl alcohol</strong></td><td><strong>nothing</strong></td><td><strong>sodium chloride</strong></td></tr><tr><td>Preservative?</td><td><strong>Yes</strong> — stalls bacterial growth</td><td>No</td><td>No</td></tr><tr><td>Sterile at manufacture?</td><td>Yes</td><td>Yes</td><td>Yes</td></tr><tr><td>After opening</td><td><strong>Guarded</strong> for the labeled window</td><td>Unguarded — discard promptly</td><td>Unguarded — discard promptly</td></tr></tbody></table></div><div class="cap">Three different liquids, three different jobs. None of them interchangeable.</div></div>
+<h3 class="reveal" style="font-family:var(--disp);margin:0 0 1rem;font-size:1.25rem">Common mistakes, corrected</h3>
+<div class="anec-grid">
+<div class="anec reveal"><div class="anec-head"><h4>BAC vs saline</h4></div><p>"They're both 0.9%, so they're the same." <strong>No.</strong> 0.9% benzyl alcohol and 0.9% sodium chloride share a number and nothing else — different solute, different product, different purpose.</p><div class="caveat"><strong>Caveat:</strong> read the solute, not just the percentage.<br><strong>Pattern:</strong> The most expensive confusion on this page.</div></div>
+<div class="anec reveal"><div class="anec-head"><h4>BAC vs sterile water</h4></div><p>"Clear water is clear water." <strong>No.</strong> Sterile water has no preservative — once opened it has no backup. BAC water's alcohol is the entire point of its existence.</p><div class="caveat"><strong>Caveat:</strong> "sterile" describes a moment, not a defense system.<br><strong>Pattern:</strong> Opening the vial changes the game.</div></div>
+<div class="anec reveal"><div class="anec-head"><h4>Benzyl alcohol vs the active compound</h4></div><p>"The preservative boosts the peptide." <strong>No.</strong> Benzyl alcohol guards the vial — it never contributes pharmacology, potency, or effect to whatever is dissolved.</p><div class="caveat"><strong>Caveat:</strong> a guard is not an ingredient.<br><strong>Pattern:</strong> Preservative ≠ active compound, ever.</div></div>
+<div class="anec reveal"><div class="anec-head"><h4>"Dilution" vs "activation"</h4></div><p>"Mixing wakes the peptide up." <strong>No.</strong> Dissolving spreads molecules evenly through the liquid. Nothing is activated, energized, or switched on.</p><div class="caveat"><strong>Caveat:</strong> physics, not magic.<br><strong>Pattern:</strong> Uniform solution ≠ activated molecule.</div></div>
+</div>
+<h3 class="reveal" style="font-family:var(--disp);margin:1.8rem 0 1rem;font-size:1.25rem">What it does vs what it doesn't do</h3>
+<div class="grid2">
+<div class="card teal reveal"><h3>What it does</h3><ul class="checklist"><li><strong>Dilutes</strong> lab materials to a usable concentration.</li><li><strong>Preserves</strong> multi-entry vials by stalling bacterial growth between uses.</li><li>Arrives as a <strong>regulated pharmaceutical diluent</strong> with tested limits.</li></ul></div>
+<div class="limits reveal" style="margin-bottom:0"><h3>What it doesn't do</h3><ul><li>Is <strong>not</strong> a therapeutic peptide, hormone, or metabolic compound.</li><li>Causes <strong>no</strong> fat loss, muscle growth, healing, or anti-aging effects.</li><li><strong>No</strong> receptor activation — it has no pharmacology of its own.</li><li><strong>Cannot</strong> rescue a contaminated vial or replace sterile technique.</li></ul></div>
+</div>
+<div class="plain reveal"><div class="plabel">Compatibility</div><p><strong>Not every compound is compatible with every diluent.</strong> Preservatives, pH, and tonicity are formulation decisions — which is why the right diluent depends on the specific compound and its labeled requirements, not habit.</p></div>
+<div class="folk-note reveal"><p>The through-line: <strong>names that sound identical aren't</strong>. Two different 0.9%s, three different bottles — and a preservative that guards vials instead of performing miracles.</p></div>
+
 </section>
 <mini-poll slug="bac-water-mini-ch5"
-  data-question="&#x27;Cloudy means discard&#x27; — obvious or news?"
-  data-answers='[["🆕", "News"],["🤔", "Suspected"],["📖", "Obvious"],["☁️", "Learned the hard way"]]'>
+  data-question="Which diluent distinction will you remember?"
+  data-answers='[["⚠️", "0.9% alcohol ≠ 0.9% salt"],["💧", "BAC vs sterile water"],["🧪", "Preservative ≠ active compound"],["🔀", "Dilution ≠ activation"]]'>
 </mini-poll>
-<!-- ============ CHAPTER 6 ============ -->
+<!-- ============ CHAPTER 6 — Potential Benefits ============ -->
 <section class="chapter" id="ch6">
-  <span class="eyebrow"><span class="n">06</span>Risks & realities</span>
+  <span class="eyebrow"><span class="n">06</span>Potential benefits</span>
+  <h2>Potential <span class="hl">benefits</span></h2>
+  <p class="lede">Bacteriostatic water is a <strong>diluent, not a therapy</strong> — so "benefits" here means <strong>formulation properties</strong>: things the preservative demonstrably does in the vial, what follows from that, and what the internet says about it. Three tiers, kept strictly separate.</p>
+  <div class="safety-grid">
+    <div class="scard lvl-known reveal"><span class="level">Established</span><h4>Stalls bacterial growth between entries</h4><p><strong>Preservative efficacy testing:</strong> 0.9% benzyl alcohol is tested to pharmacopeia standards to inhibit the growth of specified microbes over the labeled use window — commonly up to 28 days after first entry. This is the core, established property: stasis, measured.</p></div>
+    <div class="scard lvl-known reveal"><span class="level">Established</span><h4>Enables the multi-entry vial design</h4><p><strong>Formulation fact:</strong> every needle entry is a contamination opportunity. A preserved diluent gives a repeatedly accessed vial a defense it would otherwise lack — the entire reason multi-dose vials exist as a format.</p></div>
+  </div>
+  <div class="xtile reveal"><span class="xdot"></span><span class="xlead">Think of it this way:</span> a museum with a security guard vs an empty building overnight. The guard doesn't make the art better — it stops squatters moving in between visits. The benefit is <strong>protection of the space</strong>, never improvement of what's inside.</div>
+  <div class="safety-grid">
+    <div class="scard lvl-theory reveal"><span class="level">Emerging</span><h4>Fewer contamination events in real handling</h4><p><strong>Predicted, not quantified:</strong> the preservative mechanism is established, but the real-world size of the reduction — preserved vs unpreserved water under identical handling — is not measured head-to-head in published studies. Logical, but unmeasured.</p></div>
+    <div class="scard lvl-theory reveal"><span class="level">Emerging</span><h4>The default in repeated-access workflows</h4><p><strong>Practice-based preference:</strong> preserved diluents are the standard choice for multi-entry pharmacy workflows. That preference reflects <strong>professional convention</strong>, not trial-proven superiority per compound.</p></div>
+  </div>
+  <div class="ulegend reveal"><span class="udot" role="img" aria-label="Unverified anecdote"></span><p><strong>Unverified anecdote</strong> — the pulsing dot marks paraphrased recurring themes from forum and formulation-discussion spaces: not verified, not evidence.</p></div>
+  <div class="anec-grid">
+    <div class="anec reveal"><div class="anec-head"><h4>The "just use BAC water" default</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>Recurring theme: forum regulars recommending preserved water as <strong>the automatic choice</strong> for any multi-entry workflow. <strong>Caveat:</strong> popularity is not a quality certificate — and it skips the compatibility question entirely.</p></div>
+    <div class="anec reveal"><div class="anec-head"><h4>The cloudy-vial confession</h4><span class="udot" role="img" aria-label="Unverified anecdote"></span></div><p>Recurring theme: "mine went cloudy even with the preservative" — shared as proof the guard has limits. <strong>Caveat:</strong> consistent with this page's core point — preservation is backup, not immunity.</p></div>
+  </div>
+  <div class="folk-note reveal"><p>Anecdotes describe what people saw; they don't establish what works. The formulation chemistry in chapters 1–4 is what you can actually rely on.</p></div>
+  <div class="plain reveal"><div class="plabel">The honest summary</div><p>The benefits of bacteriostatic water are <strong>properties, not promises</strong>: a tested preservative action that stalls microbial growth in multi-entry vials. Nothing here implies any therapeutic effect — a diluent <strong>dissolves and preserves</strong>; it doesn't treat anything.</p></div>
+</section>
+<mini-poll slug="bac-water-mini-benefits"
+  data-question="Which formulation property matters most to you?"
+  data-answers='[["🛡️", "Preservative action"],["🔁", "Multi-entry design"],["🧪", "Tested standards"],["⚖️", "None — technique rules"]]'>
+</mini-poll>
+<!-- ============ CHAPTER 7 — Who It May Suit ============ -->
+<section class="chapter" id="ch7">
+  <span class="eyebrow"><span class="n">07</span>Who it may suit</span>
+  <h2>Who it may suit — <span class="hl">and who it should not</span></h2>
+  <p class="lede">A diluent is a lab tool. Like any tool, it has <strong>contexts it fits and contexts it doesn't</strong> — and the fit depends on the workflow and the compound, never on habit. No administration guidance here: this is about <strong>which bottle belongs on which bench</strong>.</p>
+  <div class="grid2">
+    <div class="card teal reveal"><h3>✅ Contexts where it may be the appropriate research choice</h3><ul>
+      <li><strong>Repeated-access (multi-entry) lab workflows</strong> — the scenario the preservative is built for: vials entered many times over days or weeks</li>
+      <li><strong>Workflows specifying a labeled, tested preserved diluent</strong> — pharmacopeia-grade products with defined limits and use windows</li>
+      <li><strong>Comparative formulation study</strong> — learning why preserved and unpreserved diluents exist as distinct tools, not interchangeable ones</li>
+      <li><strong>Educational contexts</strong> — studying what preservatives do and don't do in real lab practice</li>
+    </ul></div>
+    <div class="card org reveal"><h3>🚫 Contexts where it may not suit — extra caution</h3><ul>
+      <li><strong>Neonatal contexts</strong> — benzyl alcohol carries <strong>labeled toxicity warnings</strong> for premature infants; the guard is dangerous there</li>
+      <li><strong>Single-use workflows</strong> — where an unpreserved diluent with prompt discard is the simpler, specified choice</li>
+      <li><strong>Compounds with known preservative incompatibility</strong> — the diluent must match the compound's labeled requirements, not the user's habit</li>
+      <li><strong>Unregulated gray-market products</strong> — unverified sterility, concentration, and contents; a label is not a test</li>
+    </ul></div>
+  </div>
+  <div class="plain reveal"><div class="plabel">General information</div><p><strong>This is general information, not personal medical advice.</strong> Diluent choices for anything beyond the bench belong with a licensed pharmacist or clinician — not a web page.</p></div>
+</section>
+<mini-poll slug="bac-water-mini-fit"
+  data-question="Preserved vs unpreserved — what&#39;s your takeaway?"
+  data-answers='[["🛡️", "Preservative earns its place"],["💧", "Unpreserved has its lane"],["⚖️", "Depends on the workflow"],["😐", "Still deciding"]]'>
+</mini-poll>
+<!-- ============ CHAPTER 8 ============ -->
+<section class="chapter" id="ch8">
+  <span class="eyebrow"><span class="n">08</span>Risks & realities</span>
   <h2>Risks & <span class="hl">realities</span></h2>
   <p class="lede">The preservative is safe in its labeled context — and <strong>genuinely dangerous outside it</strong>. Plus the contamination realities no preservative fixes.</p>
 <div class="safety-grid">
@@ -643,39 +741,39 @@ mini-poll { display: block; }
 </div>
 <div class="plain reveal"><div class="plabel">Plain English</div><p>Known: <strong>safe in its lane, dangerous outside it</strong> (ask neonatology). Unknown: <strong>what's actually in unregulated bottles</strong>. And the permanent reality: <strong>no preservative survives bad technique</strong> — the human is always the weakest link.</p></div>
 </section>
-<mini-poll slug="bac-water-mini-ch6"
+<mini-poll slug="bac-water-mini-ch8"
   data-question="Which reality hits hardest?"
   data-answers='[["👶", "Neonatal toxicity"],["🏭", "Gray-market quality"],["🧫", "Contamination anyway"],["🧠", "False confidence"]]'>
 </mini-poll>
-<!-- ============ CHAPTER 7 ============ -->
-<section class="chapter" id="ch7">
-  <span class="eyebrow"><span class="n">07</span>Glossary</span>
-  <h2>Speak <span class="hl">lab diluent</span></h2>
-  <p class="lede">Twelve terms, each with the science, an example, and a plain-English translation. Tap any term to expand it.</p>
+<!-- ============ CHAPTER 9 ============ -->
+<section class="chapter" id="ch9">
+  <span class="eyebrow"><span class="n">09</span>Understanding BAC Water Terminology</span>
+  <h2>Understanding <span class="hl">BAC Water</span> Terminology</h2>
+  <p class="lede">Twelve terms, each with the science and a plain-English translation. Tap any term to expand it.</p>
 <div class="gloss">
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M24 6v30M14 12l20 24M34 12L14 36" fill="none" stroke="#BAE6FD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Bacteriostatic</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Inhibiting bacterial growth without necessarily killing. The 'static' in the name is the whole point — stasis, not extermination.</p><p class="gex"><span class="gslabel">Example</span>What 0.9% benzyl alcohol does in the vial.</p><div class="plain"><span class="plabel">Plain English</span>Puts bacteria on pause — doesn't kill them.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><circle cx="24" cy="24" r="14" fill="none" stroke="#0284C7" stroke-width="2.5"/><circle cx="24" cy="24" r="5" fill="#0284C7"/></svg><span class="term">Bactericidal</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Actually killing bacteria. A stronger claim than bacteriostatic — and one this product does not make.</p><p class="gex"><span class="gslabel">Example</span>What people assume 'bacteriostatic' means.</p><div class="plain"><span class="plabel">Plain English</span>Kills bacteria — a different, stronger job.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M12 36l8-18 6 10 4-6 6 14z" fill="none" stroke="#0C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Benzyl alcohol</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>An aromatic alcohol used at low concentrations as an antimicrobial preservative in multi-dose vials and diluents.</p><p class="gex"><span class="gslabel">Example</span>The 0.9% guard in the water.</p><div class="plain"><span class="plabel">Plain English</span>The preservative ingredient — the guard on duty.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M10 24h8l3-8 4 16 3-8h10" fill="none" stroke="#BAE6FD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Sterile</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Free of living microorganisms at the time of manufacture. A starting condition, not a permanent property once opened.</p><p class="gex"><span class="gslabel">Example</span>What the water is before first use.</p><div class="plain"><span class="plabel">Plain English</span>Germ-free at the factory — handle with care after.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><path d="M14 8h20v10l-5 5v13a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3V23l-5-5z" fill="none" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Aseptic technique</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Practices that keep sterile things sterile during handling: clean surfaces, sterile tools, minimal exposure.</p><p class="gex"><span class="gslabel">Example</span>The real contamination defense.</p><div class="plain"><span class="plabel">Plain English</span>Clean handling habits — the main event.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M24 8c7 0 12 5 12 12 0 9-12 20-12 20S12 29 12 20c0-7 5-12 12-12z" fill="none" stroke="#0C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Endotoxin</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Toxic fragments from dead Gram-negative bacteria. Preservatives don't remove them; only proper manufacturing keeps them out.</p><p class="gex"><span class="gslabel">Example</span>What the guard can't catch.</p><div class="plain"><span class="plabel">Plain English</span>Bacterial debris that's toxic even when the bacteria are dead.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M8 16h32M8 24h32M8 32h20" fill="none" stroke="#BAE6FD" stroke-width="2.5" stroke-linecap="round"/></svg><span class="term">Preservative efficacy</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Standardized testing of whether a preservative actually suppresses specified microbes over the use period.</p><p class="gex"><span class="gslabel">Example</span>The test behind the labeled use window.</p><div class="plain"><span class="plabel">Plain English</span>Proving the guard actually guards.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><path d="M18 10h12v28H18zM18 18h12M18 26h12" fill="none" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Multi-dose vial</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>A vial designed to be entered multiple times — the entire reason preservatives exist.</p><p class="gex"><span class="gslabel">Example</span>The scenario bacteriostatic water is built for.</p><div class="plain"><span class="plabel">Plain English</span>A bottle meant to be opened again and again.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M24 6l14 8v16l-14 8-14-8V14z" fill="none" stroke="#0C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="22" r="3.5" fill="#0C4A6E"/></svg><span class="term">USP</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>United States Pharmacopeia: the standards body defining what 'sterile water' and preservative levels must meet.</p><p class="gex"><span class="gslabel">Example</span>The rulebook for the product.</p><div class="plain"><span class="plabel">Plain English</span>The official recipe book for drug ingredients.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M10 30c3-9 8-14 14-14s11 5 14 14M24 16v18" fill="none" stroke="#BAE6FD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Gasping syndrome</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Severe benzyl-alcohol toxicity reported in premature infants — the historical lesson behind neonatal warnings on preserved products.</p><p class="gex"><span class="gslabel">Example</span>Why the preservative has strict context limits.</p><div class="plain"><span class="plabel">Plain English</span>A tragic lesson: the guard is dangerous to newborns.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><circle cx="17" cy="17" r="7" fill="none" stroke="#0284C7" stroke-width="2.5"/><path d="M22 22l12 12" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round"/></svg><span class="term">Precipitation</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>When dissolved material falls out of solution as particles — one cause of cloudy vials, and a reason to discard.</p><p class="gex"><span class="gslabel">Example</span>Cloudiness that isn't microbes, still a discard.</p><div class="plain"><span class="plabel">Plain English</span>Stuff falling out of solution — cloudy means toss it.</div></div></div>
-<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M24 8v32M12 14l24 20M36 14L12 34" fill="none" stroke="#0C4A6E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Use window</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>The labeled period after first entry during which the preservative is tested to work — commonly up to 28 days.</p><p class="gex"><span class="gslabel">Example</span>The guard's tested shift length.</p><div class="plain"><span class="plabel">Plain English</span>How long the preservative is proven to last.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M24 6v30M14 12l20 24M34 12L14 36" fill="none" stroke="#bafdd2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Bacteriostatic</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Bacteriostatic describes an agent or condition that inhibits the growth and reproduction of bacteria without necessarily killing them. The word comes from the Greek — from ‘causing to stand’ — the microbes are held in stasis, not destroyed. In bacteriostatic water, 0.9% benzyl alcohol is the bacteriostatic agent: it disrupts bacterial membranes enough that contaminants cannot establish growing colonies. This is fundamentally different from killing bacteria outright — removing the preservative would let growth resume. Bacteriostatic action therefore suppresses contamination; it does not decontaminate a vial that is already compromised.</p><div class="plain"><span class="plabel">Plain English</span>Think of it as pressing pause on bacteria rather than hitting delete. A bacteriostatic agent stops germs from multiplying and spreading, but it does not wipe them out — they are stalled, not dead. That is what the 0.9% benzyl alcohol in this water does: it keeps anything that sneaks into the vial from growing into a colony. It cannot clean up a vial that is already dirty, because nothing in it has been killed. Stasis means standing still — not gone.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><circle cx="24" cy="24" r="14" fill="none" stroke="#c40526" stroke-width="2.5"/><circle cx="24" cy="24" r="5" fill="#c40526"/></svg><span class="term">Bactericidal</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Bactericidal describes an agent that actually kills bacteria — from the Latin for ‘to kill’. A bactericidal product destroys microbial cells outright rather than merely holding their growth in check. Bacteriostatic water makes no bactericidal claim: its 0.9% benzyl alcohol inhibits growth, and the distinction matters because many people assume ‘bacteriostatic’ means ‘germ-killing’. Any stronger antimicrobial claim would require different testing, different labeling, and a different product.</p><div class="plain"><span class="plabel">Plain English</span>This word just means ‘kills bacteria’ — the delete button, not the pause button. It is a stronger promise than bacteriostatic, because destroying germs is a bigger job than stalling them. Bacteriostatic water does not make this promise; it only puts the brakes on growth. People mix the two up all the time, which is exactly why the name difference matters.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M12 36l8-18 6 10 4-6 6 14z" fill="none" stroke="#6e0c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Benzyl alcohol</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Benzyl alcohol is an aromatic alcohol used at low concentrations as an antimicrobial preservative in multi-dose vials and diluents. At 0.9% in water for injection, it partitions into bacterial cell membranes and disrupts them, inhibiting the growth of common bacterial contaminants. It contributes no pharmacology of its own: it does not dissolve, activate, or enhance whatever compound is added to the diluent. Its safety profile is concentration- and context-dependent — safe in its labeled use, with strict warnings against use in premature infants.</p><div class="plain"><span class="plabel">Plain English</span>Benzyl alcohol is the preservative ingredient — the one thing in the bottle that guards against germs. In this water it makes up 0.9% of the liquid, and it works by disrupting bacterial membranes so colonies cannot get started. It does nothing else: it does not boost, activate, or add anything to whatever is dissolved in the water. It is safe in its normal, intended setting — but there are strict warnings against using it around premature infants.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M10 24h8l3-8 4 16 3-8h10" fill="none" stroke="#bafdd2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Sterile</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Sterile means free of all living microorganisms, achieved at the time of manufacture through validated processes such as steam sterilization or sterile filtration. It is a starting condition of the product, not a property that maintains itself: every time a vial is entered, that sterility can be compromised. This is why this page distinguishes sterile water from bacteriostatic water — the former starts clean but has no backup once opened, while the latter adds a preservative as that backup. ‘Sterile’ describes a moment, not a defense system.</p><div class="plain"><span class="plabel">Plain English</span>Sterile means no living germs in it — but only at the moment it left the factory, after proper sterilization. The instant a vial is opened and a needle passes through, that germ-free status can be broken. That is the big difference from bacteriostatic water: plain sterile water starts clean but has no guard once opened, while BAC water adds the preservative as backup. Sterile is a snapshot in time, not a security system.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><path d="M14 8h20v10l-5 5v13a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3V23l-5-5z" fill="none" stroke="#c40526" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Aseptic technique</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Aseptic technique is the set of handling practices designed to keep sterile products and instruments free of contamination: clean work surfaces, sterile needles and supplies, minimal exposure time, and disinfection of entry points. It remains the primary line of defense against contamination in laboratory and pharmacy work, with the preservative in bacteriostatic water serving only as a secondary backup. Studies of vial contamination consistently identify handling — not the presence or absence of a preservative — as the variable that matters most. No preservative compensates for sloppy technique.</p><div class="plain"><span class="plabel">Plain English</span>This is just the formal name for clean handling habits: clean bench, sterile needles, keeping things open for as short a time as possible. It is the main event when it comes to keeping vials uncontaminated — the preservative is only the backup singer. Studies keep finding the same thing: how you handle the vial matters far more than what is in it. If your technique is sloppy, no amount of preservative will save you.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M24 8c7 0 12 5 12 12 0 9-12 20-12 20S12 29 12 20c0-7 5-12 12-12z" fill="none" stroke="#6e0c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Endotoxin</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Endotoxins are toxic components of the outer membrane of Gram-negative bacteria, released when the bacteria die and break apart. Unlike living microbes, endotoxins are chemical toxins — a preservative that stalls bacterial growth does nothing to remove toxins already present. Preventing endotoxin contamination depends entirely on proper manufacturing: high-quality water, validated depyrogenation, and controlled processes. This is one of the hard limits of bacteriostatic water — it guards against living contaminants, not the debris they leave behind.</p><div class="plain"><span class="plabel">Plain English</span>Endotoxins are poisonous fragments from the outer shell of certain bacteria, and they spill out when those bacteria die. A preservative can stall living germs, but it cannot do a thing about toxin fragments already floating around — that is a chemical problem, not a living-germ problem. The only way to keep endotoxins out is proper manufacturing in the first place. So while BAC water guards against live contaminants, it offers zero protection against the debris they leave behind.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M8 16h32M8 24h32M8 32h20" fill="none" stroke="#bafdd2" stroke-width="2.5" stroke-linecap="round"/></svg><span class="term">Preservative efficacy</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Preservative efficacy is the measured ability of a preservative to suppress the growth of specified test microorganisms in a product over its labeled use period. It is assessed through standardized, pharmacopeia-defined tests in which the product is challenged with known organisms and microbial counts are tracked over time. Bacteriostatic water’s labeled use window — commonly up to 28 days after first entry — reflects the conditions under which efficacy was tested, not an open-ended guarantee. Efficacy applies to the tested organisms; it says nothing about untested microbes or contamination introduced by poor handling.</p><div class="plain"><span class="plabel">Plain English</span>This is the formal proof that the preservative actually works: laboratories deliberately add known germs to the product and measure whether they get suppressed over the labeled use period. The testing follows official standards — it is not just someone’s opinion that the alcohol does its job. That commonly cited 28-day window comes from these tests; it means ‘proven under these conditions’, not ‘guaranteed forever’. And it only covers the germs that were actually tested, not everything that could possibly sneak in.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><path d="M18 10h12v28H18zM18 18h12M18 26h12" fill="none" stroke="#c40526" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Multi-dose vial</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>A multi-dose vial is a sealed container designed and labeled to be entered more than once, with each entry made through the stopper using a sterile needle. Repeated entries are the reason preservatives exist: every puncture is a new opportunity for microbial contamination. Preservatives like 0.9% benzyl alcohol are added specifically for this format, suppressing what is introduced between uses across the labeled window. A multi-dose vial is therefore a packaging format with an engineered defense — not a product that can be opened indefinitely without risk.</p><div class="plain"><span class="plabel">Plain English</span>This is simply a vial designed to be poked into more than once — each withdrawal taken through the rubber stopper with a sterile needle. Every poke is a chance for germs to get in, which is exactly why these vials contain a preservative. The 0.9% benzyl alcohol sits there to stall anything introduced between uses, for as long as the labeled window says. But ‘made for repeated use’ does not mean ‘safe forever’ — it is a format with a built-in guard, not an unlimited pass.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M24 6l14 8v16l-14 8-14-8V14z" fill="none" stroke="#6e0c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="22" r="3.5" fill="#6e0c1c"/></svg><span class="term">USP</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>USP is the United States Pharmacopeia, the nonprofit organization that publishes legally recognized standards for the identity, strength, quality, and purity of medicines and their ingredients. Its monographs define what products like ‘sterile water for injection’ must meet — including acceptable preservative concentrations and the standards for preservative-efficacy testing. When a diluent is described as pharmacopeia-grade, it means it was manufactured and tested to these published specifications. USP standards do not, however, verify any individual vial on a shelf — gray-market products can carry a label without meeting the standard.</p><div class="plain"><span class="plabel">Plain English</span>USP stands for the United States Pharmacopeia — the organization that writes the official quality standards for medicines and their ingredients. It sets the rules for what ‘sterile water for injection’ has to be, including how much preservative is allowed and how preservative testing must be done. A product called ‘pharmacopeia-grade’ was made and tested against these published rules. But the USP does not inspect every bottle on every shelf — an unregulated seller can print anything on a label, so a label alone proves nothing.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v1" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#BAE6FD22"/><path d="M10 30c3-9 8-14 14-14s11 5 14 14M24 16v18" fill="none" stroke="#bafdd2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Gasping syndrome</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Gasping syndrome is a severe, potentially fatal toxic reaction to benzyl alcohol exposure reported in premature infants in the early 1980s, when preserved intravenous flush solutions were used in neonatal care. Affected infants developed characteristic gasping respirations along with metabolic acidosis, neurological deterioration, and cardiovascular collapse. The cluster of cases showed that premature infants cannot metabolize and clear benzyl alcohol the way older patients can. It is the historical lesson behind the neonatal warnings on preserved products: the preservative that is safe in its labeled context is genuinely dangerous outside it.</p><div class="plain"><span class="plabel">Plain English</span>This is the name given to a tragic episode in the early 1980s: premature infants given preserved IV flushes developed gasping breathing, severe acid buildup in the blood, and neurological and heart failure — many did not survive. It turned out these tiny patients could not break down and clear benzyl alcohol the way older children and adults can. That discovery is exactly why preserved products now carry neonatal warnings. It is the clearest proof that a preservative can be safe in its proper lane and dangerous outside it.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v2" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0284C722"/><circle cx="17" cy="17" r="7" fill="none" stroke="#c40526" stroke-width="2.5"/><path d="M22 22l12 12" stroke="#c40526" stroke-width="2.5" stroke-linecap="round"/></svg><span class="term">Precipitation</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>Precipitation occurs when material that was dissolved in a liquid comes out of solution and forms visible particles, crystals, or cloudiness. It can be triggered by changes in temperature, pH, concentration, or interactions between dissolved substances. In a vial, precipitation is visually indistinguishable from microbial contamination without testing — which is why cloudiness, particles, or color change are treated as reasons to discard, regardless of cause. Precipitation says nothing about the preservative: it is a chemistry problem, not a contamination-control failure.</p><div class="plain"><span class="plabel">Plain English</span>Precipitation is what happens when dissolved material falls back out of the liquid as tiny particles or crystals, turning it cloudy. It can be triggered by temperature changes, pH shifts, or substances in the solution interacting with each other. You cannot tell by looking whether cloudiness is chemistry or germs — so any cloudy, speckled, or discolored vial gets discarded, no exceptions. And it has nothing to do with whether the preservative works; it is a chemistry issue, not a germ issue.</div></div></div>
+<div class="g-item"><button class="g-q" aria-expanded="false"><svg class="gthumb v3" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0C4A6E22"/><path d="M24 8v32M12 14l24 20M36 14L12 34" fill="none" stroke="#6e0c1c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="term">Use window</span><span class="plus">+</span></button><div class="g-a"><p class="gsci"><span class="gslabel">The science</span>The use window is the labeled period after first entry during which a multi-dose product’s preservative has been tested to remain effective — commonly stated as up to 28 days for bacteriostatic water. It is anchored to preservative-efficacy testing under defined conditions, not to the product’s general safety or sterility over time. After the window closes, the preservative is in untested territory: it may still work, but ‘probably fine’ is not a laboratory standard. The use window is therefore a tested claim with a boundary, not an estimate of when the product goes bad.</p><div class="plain"><span class="plabel">Plain English</span>The use window is simply the labeled period — often up to 28 days after first opening — during which the preservative has actually been tested to work. It is based on real testing under specific conditions, not on someone’s guess about how long the bottle lasts. Once that window passes, nobody has proven the preservative still works — ‘probably fine’ does not cut it in a lab. Think of it as a tested promise with an expiration date, not a guess about when things go bad.</div></div></div>
 </div>
 </section>
-<mini-poll slug="bac-water-mini-ch7"
+<mini-poll slug="bac-water-mini-ch9"
   data-question="Which term was newest to you?"
   data-answers='[["🛡️", "Bacteriostatic"],["☠️", "Endotoxin"],["📏", "Preservative efficacy"],["🏛️", "USP"]]'>
 </mini-poll>
-<!-- ============ CHAPTER 8 ============ -->
-<section class="chapter" id="ch8">
-  <span class="eyebrow"><span class="n">08</span>Takeaways</span>
+<!-- ============ CHAPTER 10 ============ -->
+<section class="chapter" id="ch10">
+  <span class="eyebrow"><span class="n">10</span>Takeaways</span>
   <h2>The <span class="hl">bottom line</span></h2>
-  <p class="lede">Eight chapters, distilled. A humble lab staple, accurately understood.</p>
+  <p class="lede">Ten chapters, distilled. A humble lab staple, accurately understood.</p>
 <div class="take-grid">
 <div class="take reveal"><div class="tk">💧</div><h4>Two ingredients, two jobs</h4><p>Sterile water <strong>dilutes</strong>; 0.9% benzyl alcohol <strong>preserves</strong>.</p></div>
 <div class="take reveal"><div class="tk">🛡️</div><h4>Stasis, not extermination</h4><p><strong>Bacteriostatic ≠ bactericidal</strong> — the single most important distinction on this page.</p></div>
@@ -690,7 +788,8 @@ mini-poll { display: block; }
 </div>
 <div class="limits reveal"><h3>What this page does not do</h3><ul><li><strong>No instructions of any kind.</strong> This page describes what bacteriostatic water is — it does not explain how to use it for anything.</li><li><strong>No sourcing information.</strong> This page does not help find, evaluate, or buy lab products from any channel.</li><li><strong>Can't replace your pharmacist.</strong> Questions about diluents belong with a licensed clinician or pharmacist — not a web page.</li></ul></div>
 </section>
-<mini-poll slug="bac-water-mini-ch8"
+<h2 class="rate-head">⭐ How would you rate this infographic?</h2>
+<mini-poll slug="bac-water-mini-ch10"
   data-question="How would you rate this infographic?"
   data-answers='[["😍", "Loved it — five stars"],["🙂", "Good stuff — four stars"],["😐", "It&#39;s okay — three stars"]]'>
 </mini-poll>
@@ -714,6 +813,8 @@ mini-poll { display: block; }
 (function(){
 "use strict";
 var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+/* ---------- freeze SMIL under reduced motion ---------- */
+if(reduced){try{document.querySelectorAll("svg").forEach(function(s){if(s.pauseAnimations)s.pauseAnimations();});}catch(e){}}
 /* ---------- theme ---------- */
 function setTheme(t){
   document.documentElement.setAttribute("data-theme",t);
@@ -734,7 +835,7 @@ setTheme(document.documentElement.getAttribute("data-theme")==="light"?"light":"
   function size(){W=window.innerWidth;H=window.innerHeight;svg.setAttribute("viewBox","0 0 "+W+" "+H);}
   size();window.addEventListener("resize",size);
   var NS="http://www.w3.org/2000/svg";
-  var colors=["#BAE6FD","#0284C7","#BAE6FD","#0C4A6E","#0284C7","#BAE6FD"];
+  var colors=["#bafdd2","#c40526","#bafdd2","#6e0c1c","#c40526","#bafdd2"];
   for(var i=0;i<140;i++){
     var c=document.createElementNS(NS,"circle");
     var col=colors[i%colors.length];
@@ -776,7 +877,7 @@ setTheme(document.documentElement.getAttribute("data-theme")==="light"?"light":"
     var c=document.createElementNS(NS,"circle");
     c.setAttribute("cx",x.toFixed(1));c.setAttribute("cy",yy.toFixed(1));
     c.setAttribute("r",i%5===0?11:8.5);
-    c.setAttribute("fill","#0d1020");
+    c.setAttribute("fill","#200d10");
     c.setAttribute("stroke","url(#beadTri)");c.setAttribute("stroke-width","4");
     g.appendChild(c);
     if(i<n-1){
@@ -784,7 +885,7 @@ setTheme(document.documentElement.getAttribute("data-theme")==="light"?"light":"
       var l=document.createElementNS(NS,"line");
       l.setAttribute("x1",x.toFixed(1));l.setAttribute("y1",yy.toFixed(1));
       l.setAttribute("x2",x2.toFixed(1));l.setAttribute("y2",yy2.toFixed(1));
-      l.setAttribute("stroke","#3a4160");l.setAttribute("stroke-width","3");
+      l.setAttribute("stroke","#603a40");l.setAttribute("stroke-width","3");
       g.insertBefore(l,g.firstChild);
     }
   }
@@ -841,7 +942,7 @@ var bar=document.getElementById("progress"),
     tocBar=document.getElementById("tocBar"),tocPct=document.getElementById("tocPct"),
     links=Array.prototype.slice.call(document.querySelectorAll(".toc a, nav.chapters a")),
     rail=document.getElementById("rail"),
-    sections=["ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8"].map(function(id){return document.getElementById(id);}),
+    sections=["ch1","ch2","ch3","ch4","ch5","ch6","ch7","ch8","ch9","ch10"].map(function(id){return document.getElementById(id);}),
     pill=document.querySelector(".toc-pill"),cur=-1,ticking=false;
 function easeWidth(el,v){el.style.width=v+"%";}
 function update(){
@@ -884,7 +985,7 @@ function fireConfetti(){
   var c=document.getElementById("confetti"),ctx=c.getContext("2d");
   c.width=window.innerWidth;c.height=window.innerHeight;
   c.classList.add("show");
-  var cols=["#BAE6FD","#0284C7","#0C4A6E","#fbbf24","#edf0f9"],parts=[];
+  var cols=["#bafdd2","#c40526","#6e0c1c","#2639f9","#f9edef"],parts=[];
   for(var i=0;i<45;i++)parts.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.25,
     w:4+Math.random()*4,h:5+Math.random()*5,c:cols[i%cols.length],
     vy:0.7+Math.random()*1.1,ph:Math.random()*Math.PI*2,sw:0.4+Math.random()*0.8,
@@ -920,7 +1021,7 @@ fio.observe(document.querySelector("footer"));
 /* Mini-poll backend config. Empty = preview mode (local votes, 3-day cooldown).
    To go live: fill in your Supabase project URL + anon key (see poll-admin README). */
 window.MINI_POLL_CONFIG = { supabaseUrl: "", anonKey: "", turnstileSiteKey: "",
-  accents: ["#BAE6FD", "#0284C7", "#0C4A6E", "#4da8d7", "#015581", "#fbbf24", "#f472b6", "#22d3ee"] };
+  accents: ["#bafdd2", "#c40526", "#6e0c1c", "#d74d65", "#037f30", "#2639f9", "#72f4a1", "#ee2245"] };
 </script>
 <script>
 /* Mini-poll web component — vanilla JS, no dependencies. See component docs for usage. */
@@ -991,8 +1092,8 @@ window.MINI_POLL_CONFIG = { supabaseUrl: "", anonKey: "", turnstileSiteKey: "",
      Palette comes from window.MINI_POLL_CONFIG.accents when the page sets one,
      otherwise the default nine-color set. */
   var ACCENTS = (window.MINI_POLL_CONFIG && window.MINI_POLL_CONFIG.accents) ||
-                ['#fdba74', '#a3e635', '#fb923c', '#a78bfa', '#f472b6',
-                 '#a3e635', '#fbbf24', '#fb7185', '#22d3ee'];
+                ['#7682fb', '#a3e635', '#3d4efa', '#a78bfa', '#72f4a1',
+                 '#a3e635', '#2639f9', '#71fba3', '#ee2245'];
   function pollAccents(slug) {
     var m = /ch(\d+)/.exec(slug || '');
     var i = m ? parseInt(m[1], 10) - 1 : 0;
